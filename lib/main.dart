@@ -168,7 +168,7 @@ class NutrientHomePage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                                WaterPage())); // Navigate to WaterPage
+                                WaterTrackerApp())); // Navigate to WaterPage
                   },
                 ),
                 _buildNutrientCard(Icons.eco, "Proteins"),

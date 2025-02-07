@@ -1,198 +1,153 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:timezone/data/latest.dart' as tz;
-import 'package:timezone/timezone.dart' as tz;
+import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:async';
+import 'dart:math';
 
-class WaterPage extends StatefulWidget {
-  @override
-  _WaterPageState createState() => _WaterPageState();
+void main() {
+  runApp(WaterTrackerApp());
 }
 
-class _WaterPageState extends State<WaterPage> {
-  // Variables for water tracking
-  double _dailyGoal = 2000; // Default daily goal in milliliters
-  double _currentIntake = 0; // Track current water intake
-  final FlutterLocalNotificationsPlugin _notificationsPlugin =
-      FlutterLocalNotificationsPlugin();
+class WaterTrackerApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        brightness: Brightness.light,
+      ),
+      home: WaterTracker(),
+    );
+  }
+}
+
+class WaterTracker extends StatefulWidget {
+  @override
+  _WaterTrackerState createState() => _WaterTrackerState();
+}
+
+class _WaterTrackerState extends State<WaterTracker> {
+  int water = 0;
+  final List<String> waterQuotes = [
+    "Water is the driving force of all nature. – Leonardo da Vinci",
+    "Thousands have lived without love, not one without water. – W. H. Auden",
+    "We forget that the water cycle and the life cycle are one. – Jacques Cousteau",
+    "Pure water is the world’s first and foremost medicine. – Slovakian Proverb",
+    "No water, no life. No blue, no green. – Sylvia Earle",
+    "Water is life, and clean water means health. – Audrey Hepburn",
+    "Nothing is softer or more flexible than water, yet nothing can resist it. – Lao Tzu"
+  ];
+  String dailyQuote = "";
 
   @override
   void initState() {
-    tz.initializeTimeZones();
-    _initializeNotifications();
     super.initState();
-    _setReminders();
+    _loadWaterIntake();
+    _resetAtMidnight();
+    _setDailyQuote();
   }
 
-  // Initialize notifications
-  void _initializeNotifications() async {
-    const AndroidInitializationSettings initializationSettingsAndroid =
-        AndroidInitializationSettings('@mipmap/ic_launcher');
-    final InitializationSettings initializationSettings =
-        InitializationSettings(android: initializationSettingsAndroid);
-    bool? initializationSuccess =
-        await _notificationsPlugin.initialize(initializationSettings);
-    if (!initializationSuccess!) {
-      print('Notification initialization failed');
-    } else {
-      print('Notification initialization succeeded');
-    }
-  }
-
-  // Set hydration reminders
-  void _setReminders() async {
-    const AndroidNotificationDetails androidPlatformChannelSpecifics =
-        AndroidNotificationDetails(
-      'hydration_reminder',
-      'Hydration Reminder',
-      channelDescription: 'Reminds you to drink water',
-      importance: Importance.high,
-      priority: Priority.high,
-    );
-    const NotificationDetails platformChannelSpecifics =
-        NotificationDetails(android: androidPlatformChannelSpecifics);
-
-    for (int i = 8; i <= 20; i += 2) {
-      final nextTime = _nextInstanceOfTime(i);
-      print('Scheduling reminder at $nextTime'); // Debug log
-      await _notificationsPlugin.zonedSchedule(
-        i,
-        'Time to Hydrate!',
-        'Drink a glass of water to stay hydrated.',
-        nextTime,
-        platformChannelSpecifics,
-        androidAllowWhileIdle: true,
-        uiLocalNotificationDateInterpretation:
-            UILocalNotificationDateInterpretation.absoluteTime,
-      );
-    }
-  }
-
-  // Calculate the next instance of a specific time
-  tz.TZDateTime _nextInstanceOfTime(int hour) {
-    final tz.TZDateTime now = tz.TZDateTime.now(tz.local);
-    tz.TZDateTime scheduledDate =
-        tz.TZDateTime(tz.local, now.year, now.month, now.day, hour);
-    if (scheduledDate.isBefore(now)) {
-      scheduledDate = scheduledDate.add(const Duration(days: 1));
-    }
-    return scheduledDate;
-  }
-
-  // Update daily water goal
-  void _updateDailyGoal(double newGoal) {
+  Future<void> _loadWaterIntake() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
-      _dailyGoal = newGoal;
+      water = prefs.getInt('waterIntake') ?? 0;
     });
   }
 
-  // Add water intake
-  void _addWater(double amount) {
-    setState(() {
-      _currentIntake += amount;
+  Future<void> _saveWaterIntake() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setInt('waterIntake', water);
+  }
+
+  void _resetAtMidnight() {
+    Timer.periodic(Duration(minutes: 1), (timer) async {
+      DateTime now = DateTime.now();
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      String? lastReset = prefs.getString('lastReset');
+      if (lastReset == null || DateTime.parse(lastReset).day != now.day) {
+        setState(() {
+          water = 0;
+          _setDailyQuote();
+        });
+        prefs.setInt('waterIntake', 0);
+        prefs.setString('lastReset', now.toIso8601String());
+      }
     });
   }
 
-  // Test notification (for troubleshooting)
-  void _testNotification() async {
-    const AndroidNotificationDetails androidDetails =
-        AndroidNotificationDetails('test_channel', 'Test',
-            importance: Importance.high);
-    const NotificationDetails details =
-        NotificationDetails(android: androidDetails);
-    await _notificationsPlugin.show(
-        0, 'Test Notification', 'This is a test', details);
+  void _setDailyQuote() {
+    setState(() {
+      dailyQuote = waterQuotes[Random().nextInt(waterQuotes.length)];
+    });
+  }
+
+  void addWater(int amount) {
+    setState(() {
+      water = (water + amount).clamp(0, 3000);
+    });
+    _saveWaterIntake();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightBlue[50],
       appBar: AppBar(
-        title: Text('Water Tracker'),
+        title: Text('Water Intake Tracker', style: TextStyle(fontWeight: FontWeight.bold)),
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(20),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Daily Water Intake Progress
-            Text(
-              'Daily Water Intake',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 10),
-            LinearProgressIndicator(
-              value: _currentIntake / _dailyGoal,
-              backgroundColor: Colors.grey[300],
-              valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
-            ),
-            SizedBox(height: 10),
-            Text(
-              '${_currentIntake.toInt()}ml / ${_dailyGoal.toInt()}ml',
-              style: TextStyle(fontSize: 16),
+            Card(
+              elevation: 5,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+              child: Padding(
+                padding: EdgeInsets.all(20),
+                child: Column(
+                  children: [
+                    Text(dailyQuote, textAlign: TextAlign.center, style: TextStyle(fontSize: 16, fontStyle: FontStyle.italic, color: Colors.blueGrey)),
+                    SizedBox(height: 20),
+                    LinearProgressIndicator(
+                      value: water / 3000,
+                      minHeight: 15,
+                      backgroundColor: Colors.grey[300],
+                      color: Colors.blue,
+                    ),
+                    SizedBox(height: 10),
+                    Text('$water ml / 3000 ml', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.blueAccent)),
+                  ],
+                ),
+              ),
             ),
             SizedBox(height: 20),
-
-            // Add Water Buttons
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _buildWaterButton(250),
-                _buildWaterButton(500),
-                _buildWaterButton(1000),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(shape: StadiumBorder(), padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10)),
+                  onPressed: () => addWater(100), 
+                  child: Text('+100ml')
+                ),
+                SizedBox(width: 10),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(shape: StadiumBorder(), padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10)),
+                  onPressed: () => addWater(250), 
+                  child: Text('+250ml')
+                ),
+                SizedBox(width: 10),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(shape: StadiumBorder(), padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10)),
+                  onPressed: () => addWater(500), 
+                  child: Text('+500ml')
+                ),
               ],
-            ),
-            SizedBox(height: 20),
-
-            // Personalized Water Goal
-            Text(
-              'Set Your Daily Goal',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 10),
-            Slider(
-              value: _dailyGoal,
-              min: 1000,
-              max: 5000,
-              divisions: 40,
-              label: '${_dailyGoal.toInt()}ml',
-              onChanged: (value) {
-                _updateDailyGoal(value);
-              },
-            ),
-            SizedBox(height: 20),
-
-            // Hydration Reminders
-            Text(
-              'Hydration Reminders',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 10),
-            Text(
-              'You will receive reminders every 2 hours to drink water.',
-              style: TextStyle(fontSize: 16),
-            ),
-            SizedBox(height: 20),
-
-            // Test Notification Button
-            ElevatedButton(
-              onPressed: _testNotification,
-              child: Text('Test Notification'),
             ),
           ],
         ),
       ),
     );
   }
-
-  // Build a button to add water
-  Widget _buildWaterButton(double amount) {
-    return ElevatedButton(
-      onPressed: () => _addWater(amount),
-      child: Text('+${amount.toInt()}ml'),
-      style: ElevatedButton.styleFrom(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-      ),
-    );
-  }
 }
+
