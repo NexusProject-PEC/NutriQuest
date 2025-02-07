@@ -27,6 +27,9 @@ class WaterTracker extends StatefulWidget {
 
 class _WaterTrackerState extends State<WaterTracker> {
   int water = 0;
+  int dailyGoal = 3000;
+  final TextEditingController _goalController = TextEditingController();
+  final TextEditingController _customWaterController = TextEditingController();
   final List<String> waterQuotes = [
     "Water is the driving force of all nature. – Leonardo da Vinci",
     "Thousands have lived without love, not one without water. – W. H. Auden",
@@ -50,12 +53,18 @@ class _WaterTrackerState extends State<WaterTracker> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       water = prefs.getInt('waterIntake') ?? 0;
+      dailyGoal = prefs.getInt('dailyGoal') ?? 3000;
     });
   }
 
   Future<void> _saveWaterIntake() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setInt('waterIntake', water);
+  }
+
+  Future<void> _saveDailyGoal() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setInt('dailyGoal', dailyGoal);
   }
 
   void _resetAtMidnight() {
@@ -82,9 +91,17 @@ class _WaterTrackerState extends State<WaterTracker> {
 
   void addWater(int amount) {
     setState(() {
-      water = (water + amount).clamp(0, 3000);
+      water = (water + amount).clamp(0, dailyGoal);
     });
     _saveWaterIntake();
+  }
+
+  void _setCustomGoal() {
+    int newGoal = int.tryParse(_goalController.text) ?? dailyGoal;
+    setState(() {
+      dailyGoal = newGoal;
+    });
+    _saveDailyGoal();
   }
 
   @override
@@ -92,8 +109,15 @@ class _WaterTrackerState extends State<WaterTracker> {
     return Scaffold(
       backgroundColor: Colors.lightBlue[50],
       appBar: AppBar(
-        title: Text('Water Intake Tracker', style: TextStyle(fontWeight: FontWeight.bold)),
+        title: Text('Water Intake Tracker',
+            style: TextStyle(fontWeight: FontWeight.bold)),
         centerTitle: true,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
       body: Padding(
         padding: EdgeInsets.all(20),
@@ -102,47 +126,61 @@ class _WaterTrackerState extends State<WaterTracker> {
           children: [
             Card(
               elevation: 5,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)),
               child: Padding(
                 padding: EdgeInsets.all(20),
                 child: Column(
                   children: [
-                    Text(dailyQuote, textAlign: TextAlign.center, style: TextStyle(fontSize: 16, fontStyle: FontStyle.italic, color: Colors.blueGrey)),
+                    Text(dailyQuote,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontStyle: FontStyle.italic,
+                            color: Colors.blueGrey)),
                     SizedBox(height: 20),
                     LinearProgressIndicator(
-                      value: water / 3000,
+                      value: water / dailyGoal,
                       minHeight: 15,
                       backgroundColor: Colors.grey[300],
                       color: Colors.blue,
                     ),
                     SizedBox(height: 10),
-                    Text('$water ml / 3000 ml', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.blueAccent)),
+                    Text('$water ml / $dailyGoal ml',
+                        style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blueAccent)),
                   ],
                 ),
               ),
             ),
             SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(shape: StadiumBorder(), padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10)),
-                  onPressed: () => addWater(100), 
-                  child: Text('+100ml')
-                ),
-                SizedBox(width: 10),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(shape: StadiumBorder(), padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10)),
-                  onPressed: () => addWater(250), 
-                  child: Text('+250ml')
-                ),
-                SizedBox(width: 10),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(shape: StadiumBorder(), padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10)),
-                  onPressed: () => addWater(500), 
-                  child: Text('+500ml')
-                ),
-              ],
+            TextField(
+              controller: _goalController,
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                  labelText: "Set Daily Goal (ml)",
+                  border: OutlineInputBorder()),
+            ),
+            ElevatedButton(onPressed: _setCustomGoal, child: Text("Set Goal")),
+            SizedBox(height: 20),
+            TextField(
+              controller: _customWaterController,
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                  labelText: "Enter Water Amount (ml)",
+                  border: OutlineInputBorder()),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                int customAmount =
+                    int.tryParse(_customWaterController.text) ?? 0;
+                if (customAmount > 0) {
+                  addWater(customAmount);
+                }
+              },
+              child: Text("Add Water"),
             ),
           ],
         ),
@@ -150,4 +188,3 @@ class _WaterTrackerState extends State<WaterTracker> {
     );
   }
 }
-
