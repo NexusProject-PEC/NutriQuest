@@ -3,29 +3,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:async';
 import 'dart:math';
 
-void main() {
-  runApp(WaterTrackerApp());
-}
-
-class WaterTrackerApp extends StatelessWidget {
+class WaterTrackerPage extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        brightness: Brightness.light,
-      ),
-      home: WaterTracker(),
-    );
-  }
+  _WaterTrackerPageState createState() => _WaterTrackerPageState();
 }
 
-class WaterTracker extends StatefulWidget {
-  @override
-  _WaterTrackerState createState() => _WaterTrackerState();
-}
-
-class _WaterTrackerState extends State<WaterTracker> {
+class _WaterTrackerPageState extends State<WaterTrackerPage> {
   int water = 0;
   int dailyGoal = 3000;
   final TextEditingController _goalController = TextEditingController();
@@ -109,15 +92,12 @@ class _WaterTrackerState extends State<WaterTracker> {
     return Scaffold(
       backgroundColor: Colors.lightBlue[50],
       appBar: AppBar(
-        title: Text('Water Intake Tracker',
-            style: TextStyle(fontWeight: FontWeight.bold)),
-        centerTitle: true,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+        title: Text(
+          'Water Intake Tracker',
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
+        centerTitle: true,
+        // When this widget is pushed onto the stack, Flutter automatically shows a default back button.
       ),
       body: Padding(
         padding: EdgeInsets.all(20),
@@ -132,12 +112,15 @@ class _WaterTrackerState extends State<WaterTracker> {
                 padding: EdgeInsets.all(20),
                 child: Column(
                   children: [
-                    Text(dailyQuote,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontStyle: FontStyle.italic,
-                            color: Colors.blueGrey)),
+                    Text(
+                      dailyQuote,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.blueGrey,
+                      ),
+                    ),
                     SizedBox(height: 20),
                     LinearProgressIndicator(
                       value: water / dailyGoal,
@@ -146,11 +129,14 @@ class _WaterTrackerState extends State<WaterTracker> {
                       color: Colors.blue,
                     ),
                     SizedBox(height: 10),
-                    Text('$water ml / $dailyGoal ml',
-                        style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.blueAccent)),
+                    Text(
+                      '$water ml / $dailyGoal ml',
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blueAccent,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -160,17 +146,22 @@ class _WaterTrackerState extends State<WaterTracker> {
               controller: _goalController,
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                  labelText: "Set Daily Goal (ml)",
-                  border: OutlineInputBorder()),
+                labelText: "Set Daily Goal (ml)",
+                border: OutlineInputBorder(),
+              ),
             ),
-            ElevatedButton(onPressed: _setCustomGoal, child: Text("Set Goal")),
+            ElevatedButton(
+              onPressed: _setCustomGoal,
+              child: Text("Set Goal"),
+            ),
             SizedBox(height: 20),
             TextField(
               controller: _customWaterController,
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
-                  labelText: "Enter Water Amount (ml)",
-                  border: OutlineInputBorder()),
+                labelText: "Enter Water Amount (ml)",
+                border: OutlineInputBorder(),
+              ),
             ),
             ElevatedButton(
               onPressed: () {
@@ -188,3 +179,4 @@ class _WaterTrackerState extends State<WaterTracker> {
     );
   }
 }
+
