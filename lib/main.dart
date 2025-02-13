@@ -1,15 +1,41 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:math' as math;
+import 'package:workmanager/workmanager.dart'; // WorkManager import
 import 'scan_page.dart';
 import 'history_page.dart';
 import 'exercise_page.dart';
 import 'feedback.dart';
 import 'help_page.dart';
 import 'about_us.dart';
-import 'water.dart'; // Import WaterPage
+import 'water.dart';
+import 'search_page.dart';
+import 'user_info_page.dart'; // Import WaterPage
 
-void main() {
+// WorkManager callback function
+void callbackDispatcher() {
+  Workmanager().executeTask((task, inputData) {
+    print("Background task executed: $task");
+    return Future.value(true);
+  });
+}
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize WorkManager
+  await Workmanager().initialize(
+    callbackDispatcher,
+    isInDebugMode: true, // Set to false in production
+  );
+
+  // Register a simple background task
+  await Workmanager().registerOneOffTask(
+    "uniqueTaskId",
+    "simpleTask",
+  );
+
   runApp(NutrientApp());
 }
 
@@ -41,7 +67,21 @@ class LoginPage extends StatelessWidget {
 }
 
 class NutrientHomePage extends StatelessWidget {
-  const NutrientHomePage({super.key});
+  NutrientHomePage({super.key});
+
+  // Random nutrient tips
+  final List<String> nutrientTips = [
+    "Drink plenty of water to stay hydrated throughout the day.",
+    "Include healthy fats like avocados and nuts in your diet.",
+    "Regular exercise helps maintain a healthy lifestyle.",
+    "Balance your meals with a mix of proteins, carbs, and fats.",
+    "Avoid processed foods for better nutrition.",
+  ];
+
+  String getRandomTip() {
+    return nutrientTips[
+        (nutrientTips.length * math.Random().nextDouble()).floor()];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -64,18 +104,18 @@ class NutrientHomePage extends StatelessWidget {
         child: Column(
           children: [
             UserAccountsDrawerHeader(
-              accountName: Text("User Name",
+              accountName: Text("Nutrient Checker",
                   style: GoogleFonts.poppins(
                       fontSize: 18, fontWeight: FontWeight.bold)),
-              accountEmail: Text("user@example.com",
+              accountEmail: Text("Stay Healthy!",
                   style: GoogleFonts.poppins(fontSize: 14)),
               currentAccountPicture: CircleAvatar(
                 backgroundColor: Colors.white,
-                child: Icon(Icons.person, size: 40, color: Colors.green),
+                child: Icon(Icons.health_and_safety,
+                    size: 40, color: Colors.green),
               ),
               decoration: BoxDecoration(color: Colors.green),
             ),
-            _buildDrawerItem(Icons.person, "Profile", () {}),
             _buildDrawerItem(Icons.feedback, "Feedback", () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => FeedBack()));
@@ -85,22 +125,10 @@ class NutrientHomePage extends StatelessWidget {
                   context, MaterialPageRoute(builder: (context) => HelpPage()));
             }),
             _buildDrawerItem(Icons.info_outline, "About Us", () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          AboutUsPage())); // Navigate to AboutUsPage
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => AboutUsPage()));
             }),
             Divider(),
-            _buildDrawerItem(Icons.settings, "Settings", () {}),
-            Divider(),
-            ListTile(
-              leading: Icon(Icons.logout, color: Colors.red),
-              title: Text("Logout", style: GoogleFonts.poppins(fontSize: 16)),
-              onTap: () {
-                _logout(context);
-              },
-            ),
           ],
         ),
       ),
@@ -138,14 +166,45 @@ class NutrientHomePage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
+            // Aligned Quick Action Buttons
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 _buildQuickAction(
                     context, Icons.qr_code_scanner, "Scan Now", ScanPage()),
                 _buildQuickAction(
-                    context, Icons.history, "View History", HistoryPage()),
+                    context, Icons.history, "Scan History", HistoryPage()),
+                _buildQuickAction(
+                    context, Icons.food_bank_rounded, "Intake", SearchPage()),
               ],
+            ),
+            SizedBox(height: 20),
+            Card(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)),
+              elevation: 4,
+              color: Colors.green[50],
+              child: Padding(
+                padding: EdgeInsets.all(16),
+                child: Column(
+                  children: [
+                    Text(
+                      "Nutrient Tip",
+                      style: GoogleFonts.poppins(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.green[900]),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      getRandomTip(),
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.poppins(
+                          fontSize: 16, color: Colors.grey[800]),
+                    ),
+                  ],
+                ),
+              ),
             ),
             SizedBox(height: 20),
             Text(
@@ -167,14 +226,19 @@ class NutrientHomePage extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>
-                                WaterTrackerApp())); // Navigate to WaterPage
+                            builder: (context) => WaterTrackerApp()));
                   },
                 ),
-                _buildNutrientCard(Icons.eco, "Proteins"),
-                _buildNutrientCard(Icons.energy_savings_leaf, "Vitamins"),
-                _buildNutrientCard(Icons.fastfood, "Carbs"),
-                _buildNutrientCard(Icons.favorite, "Fats"),
+                _buildNutrientCard(
+                  Icons.favorite,
+                  "Fats",
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => UserInfoPage()),
+                    );
+                  },
+                ),
                 _buildNutrientCard(
                   Icons.fitness_center,
                   "Exercise",
@@ -208,18 +272,21 @@ class NutrientHomePage extends StatelessWidget {
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) => page));
       },
-      child: Column(
-        children: [
-          CircleAvatar(
-            backgroundColor: Colors.green[300],
-            radius: 30,
-            child: Icon(icon, size: 30, color: Colors.white),
-          ),
-          SizedBox(height: 8),
-          Text(label,
-              style: GoogleFonts.poppins(
-                  fontSize: 14, fontWeight: FontWeight.w500)),
-        ],
+      child: Container(
+        width: 100, // Fixed width for all buttons
+        child: Column(
+          children: [
+            CircleAvatar(
+              backgroundColor: Colors.green[300],
+              radius: 30,
+              child: Icon(icon, size: 30, color: Colors.white),
+            ),
+            SizedBox(height: 8),
+            Text(label,
+                style: GoogleFonts.poppins(
+                    fontSize: 14, fontWeight: FontWeight.w500)),
+          ],
+        ),
       ),
     );
   }

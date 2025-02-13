@@ -1,13 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'dart:async';
+import 'package:workmanager/workmanager.dart';
 import 'dart:math';
+import 'package:NutriQuest/main.dart'; // Adjust the path if needed
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Workmanager().initialize(
+    callbackDispatcher,
+    isInDebugMode: true,
+  );
+
+  Workmanager().registerPeriodicTask(
+    "resetWaterTask",
+    "resetWaterIntake",
+    frequency: Duration(hours: 24),
+  );
+
   runApp(WaterTrackerApp());
 }
 
+void callbackDispatcher() {
+  Workmanager().executeTask((task, inputData) async {
+    if (task == "resetWaterIntake") {
+      await resetWaterIntake();
+    }
+    return Future.value(true);
+  });
+}
+
+Future<void> resetWaterIntake() async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  prefs.setInt('waterIntake', 0);
+}
+
 class WaterTrackerApp extends StatelessWidget {
+  const WaterTrackerApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,23 +50,29 @@ class WaterTrackerApp extends StatelessWidget {
 }
 
 class WaterTracker extends StatefulWidget {
+  const WaterTracker({super.key});
+
   @override
   _WaterTrackerState createState() => _WaterTrackerState();
 }
 
 class _WaterTrackerState extends State<WaterTracker> {
   int water = 0;
-  int dailyGoal = 3000;
-  final TextEditingController _goalController = TextEditingController();
-  final TextEditingController _customWaterController = TextEditingController();
+  int dailyGoal = 2000;
+  final Map<String, int> waterIntakeMap = {
+    "Children 4–8": 1200,
+    "Children 9–13": 1800,
+    "Children 14–18": 2200,
+    "Men 19+": 3000,
+    "Women 19+": 2400,
+    "Pregnant Women": 2400,
+    "Breastfeeding Women": 3000,
+  };
+  String selectedCategory = "Men 19+";
   final List<String> waterQuotes = [
     "Water is the driving force of all nature. – Leonardo da Vinci",
     "Thousands have lived without love, not one without water. – W. H. Auden",
-    "We forget that the water cycle and the life cycle are one. – Jacques Cousteau",
-    "Pure water is the world’s first and foremost medicine. – Slovakian Proverb",
-    "No water, no life. No blue, no green. – Sylvia Earle",
     "Water is life, and clean water means health. – Audrey Hepburn",
-    "Nothing is softer or more flexible than water, yet nothing can resist it. – Lao Tzu"
   ];
   String dailyQuote = "";
 
@@ -45,7 +80,6 @@ class _WaterTrackerState extends State<WaterTracker> {
   void initState() {
     super.initState();
     _loadWaterIntake();
-    _resetAtMidnight();
     _setDailyQuote();
   }
 
@@ -53,34 +87,13 @@ class _WaterTrackerState extends State<WaterTracker> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       water = prefs.getInt('waterIntake') ?? 0;
-      dailyGoal = prefs.getInt('dailyGoal') ?? 3000;
+      dailyGoal = waterIntakeMap[selectedCategory] ?? 2000;
     });
   }
 
   Future<void> _saveWaterIntake() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setInt('waterIntake', water);
-  }
-
-  Future<void> _saveDailyGoal() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setInt('dailyGoal', dailyGoal);
-  }
-
-  void _resetAtMidnight() {
-    Timer.periodic(Duration(minutes: 1), (timer) async {
-      DateTime now = DateTime.now();
-      SharedPreferences prefs = await SharedPreferences.getInstance();
-      String? lastReset = prefs.getString('lastReset');
-      if (lastReset == null || DateTime.parse(lastReset).day != now.day) {
-        setState(() {
-          water = 0;
-          _setDailyQuote();
-        });
-        prefs.setInt('waterIntake', 0);
-        prefs.setString('lastReset', now.toIso8601String());
-      }
-    });
   }
 
   void _setDailyQuote() {
@@ -96,12 +109,42 @@ class _WaterTrackerState extends State<WaterTracker> {
     _saveWaterIntake();
   }
 
-  void _setCustomGoal() {
-    int newGoal = int.tryParse(_goalController.text) ?? dailyGoal;
+  void resetWater() {
     setState(() {
-      dailyGoal = newGoal;
+      water = 0;
     });
-    _saveDailyGoal();
+    _saveWaterIntake();
+  }
+
+  void setCategory(String category) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("Confirm Change"),
+          content: Text(
+              "Are you sure you want to change the category? This will reset your progress."),
+          actions: [
+            TextButton(
+              child: Text("Cancel"),
+              onPressed: () => Navigator.of(context).pop(),
+            ),
+            TextButton(
+              child: Text("Confirm"),
+              onPressed: () {
+                setState(() {
+                  selectedCategory = category;
+                  dailyGoal = waterIntakeMap[category] ?? 2000;
+                  water = 0;
+                });
+                _saveWaterIntake();
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
   }
 
   @override
@@ -115,72 +158,73 @@ class _WaterTrackerState extends State<WaterTracker> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => NutrientApp()),
+            );
           },
         ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.refresh),
+            onPressed: resetWater,
+          ),
+        ],
       ),
       body: Padding(
         padding: EdgeInsets.all(20),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Card(
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15)),
-              child: Padding(
-                padding: EdgeInsets.all(20),
-                child: Column(
-                  children: [
-                    Text(dailyQuote,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontStyle: FontStyle.italic,
-                            color: Colors.blueGrey)),
-                    SizedBox(height: 20),
-                    LinearProgressIndicator(
-                      value: water / dailyGoal,
-                      minHeight: 15,
-                      backgroundColor: Colors.grey[300],
-                      color: Colors.blue,
+            Text(dailyQuote,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 16,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.blueGrey)),
+            SizedBox(height: 20),
+            Text('Selected: $selectedCategory',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            LinearProgressIndicator(
+              value: water / dailyGoal,
+              minHeight: 15,
+              backgroundColor: Colors.grey[300],
+              color: Colors.blue,
+            ),
+            SizedBox(height: 10),
+            Text('$water ml / $dailyGoal ml',
+                style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blueAccent)),
+            SizedBox(height: 20),
+            Expanded(
+              child: ListView(
+                children: waterIntakeMap.entries.map((entry) {
+                  return Card(
+                    child: ListTile(
+                      title: Text('${entry.key} - ${entry.value} ml'),
+                      trailing: ElevatedButton(
+                        onPressed: () => setCategory(entry.key),
+                        child: Text('Choose'),
+                      ),
                     ),
-                    SizedBox(height: 10),
-                    Text('$water ml / $dailyGoal ml',
-                        style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.blueAccent)),
-                  ],
-                ),
+                  );
+                }).toList(),
               ),
             ),
-            SizedBox(height: 20),
-            TextField(
-              controller: _goalController,
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                  labelText: "Set Daily Goal (ml)",
-                  border: OutlineInputBorder()),
-            ),
-            ElevatedButton(onPressed: _setCustomGoal, child: Text("Set Goal")),
-            SizedBox(height: 20),
-            TextField(
-              controller: _customWaterController,
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                  labelText: "Enter Water Amount (ml)",
-                  border: OutlineInputBorder()),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                int customAmount =
-                    int.tryParse(_customWaterController.text) ?? 0;
-                if (customAmount > 0) {
-                  addWater(customAmount);
-                }
-              },
-              child: Text("Add Water"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () => addWater(250),
+                  child: Text("+250ml"),
+                ),
+                SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: () => addWater(500),
+                  child: Text("+500ml"),
+                ),
+              ],
             ),
           ],
         ),

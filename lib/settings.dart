@@ -8,6 +8,8 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -84,7 +86,7 @@ class SettingsPage extends StatelessWidget {
   final Function(bool) onDarkModeChanged;
   final Function(String) onLanguageChanged;
 
-  SettingsPage({
+  const SettingsPage({super.key, 
     required this.isDarkMode,
     required this.selectedLanguage,
     required this.onDarkModeChanged,
