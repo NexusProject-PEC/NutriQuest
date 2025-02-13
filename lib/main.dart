@@ -231,7 +231,7 @@ class NutrientHomePage extends StatelessWidget {
                 ),
                 _buildNutrientCard(
                   Icons.favorite,
-                  "Fats",
+                  "BFP%",
                   onTap: () {
                     Navigator.push(
                       context,

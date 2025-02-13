@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mailer/mailer.dart';
-import 'package:mailer/smtp_server.dart';
+import 'mail_sender.dart';
 
 class FeedBack extends StatefulWidget {
   const FeedBack({super.key});
@@ -11,40 +10,13 @@ class FeedBack extends StatefulWidget {
 }
 
 class _FeedBackState extends State<FeedBack> {
-  final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _messageController = TextEditingController();
-
   // Function to send email
   Future<void> _sendFeedback() async {
-    if (_nameController.text.isEmpty ||
-        _emailController.text.isEmpty ||
-        _messageController.text.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("All fields are required!")),
-      );
-      return;
-    }
-
-    final smtpServer = gmail('devajeshurun57@gmail.com', 'zjyv rtwp eyzz bowu');
-
-    final message = Message()
-      ..from = Address('your-email@gmail.com', 'NutriQuest')
-      ..recipients.add('devajeshurun57@gmail.com')
-      ..subject = 'App Feedback from ${_nameController.text}'
-      ..text = _messageController.text;
-
     try {
-      final sendReport = await send(message, smtpServer);
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Feedback sent successfully!")),
-      );
-      _nameController.clear();
-      _emailController.clear();
-      _messageController.clear();
+      sendMail("feedback");
     } catch (error) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Error sending feedback: $error")),
+        SnackBar(content: Text("Error sending feedback")),
       );
     }
   }
@@ -74,39 +46,6 @@ class _FeedBackState extends State<FeedBack> {
                 style: GoogleFonts.poppins(fontSize: 16),
               ),
               SizedBox(height: 20),
-
-              // Name Field
-              TextField(
-                controller: _nameController,
-                decoration: InputDecoration(
-                  labelText: "Your Name",
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              SizedBox(height: 10),
-
-              // Email Field
-              TextField(
-                controller: _emailController,
-                decoration: InputDecoration(
-                  labelText: "Your Email",
-                  border: OutlineInputBorder(),
-                ),
-                keyboardType: TextInputType.emailAddress,
-              ),
-              SizedBox(height: 10),
-
-              // Message Field
-              TextField(
-                controller: _messageController,
-                decoration: InputDecoration(
-                  labelText: "Your Message",
-                  border: OutlineInputBorder(),
-                ),
-                maxLines: 4,
-              ),
-              SizedBox(height: 20),
-
               // Send Feedback Button
               SizedBox(
                 width: double.infinity,

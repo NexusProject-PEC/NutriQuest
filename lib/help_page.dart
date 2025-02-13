@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:url_launcher/url_launcher.dart';
-
+import 'mail_sender.dart';
 class HelpPage extends StatelessWidget {
   const HelpPage({super.key});
-
-  void _launchEmail() async {
-    final Uri emailUri = Uri(
-      scheme: 'mailto',
-      path: 'nutriquest-support@gmail.com',
-      query: 'subject=App Support&body=Describe your issue here...',
-    );
-    if (await canLaunchUrl(emailUri)) {
-      await launchUrl(emailUri);
+  Future<void> _launchEmail(BuildContext context) async {
+    try {
+      sendMail("support");
+    } catch (error) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Error sending feedback")),
+      );
     }
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -115,7 +111,7 @@ class HelpPage extends StatelessWidget {
                   textStyle: GoogleFonts.poppins(
                       fontSize: 16, fontWeight: FontWeight.bold),
                 ),
-                onPressed: _launchEmail,
+                onPressed:() =>  _launchEmail(context),
               ),
             ),
           ],

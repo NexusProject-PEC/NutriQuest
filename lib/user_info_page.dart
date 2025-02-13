@@ -58,7 +58,7 @@ class _UserInfoPageState extends State<UserInfoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("User Information")),
+      appBar: AppBar(title: Text("Body Fat Calculator")),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
