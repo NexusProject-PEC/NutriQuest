@@ -1,16 +1,16 @@
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 
-// Function to save a scanned product with nutrients and timestamp
-Future<void> saveScannedProduct(String productName, String nutrients) async {
+// Function to save a scanned product with barcode and timestamp
+Future<void> saveScannedProduct(String productName, String scanBarcode) async {
   final prefs = await SharedPreferences.getInstance();
   final String currentTime = DateTime.now().toLocal().toString();
 
-  // Create product entry with nutrients
+  // Create product entry with barcode
   Map<String, String> newEntry = {
     'name': productName,
     'time': currentTime,
-    'nutrients': nutrients, // Store nutrients
+    'barcode': scanBarcode, // Store nutrients
   };
 
   // Load existing history
