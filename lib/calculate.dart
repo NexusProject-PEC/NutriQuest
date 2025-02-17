@@ -35,6 +35,10 @@ class CalculatePage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
+          Text(
+            "Total Calorie Intake: $totalCalories",
+            style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),
+          ),
           Expanded(
             child: ListView.builder(
               itemCount: selectedProducts.length,

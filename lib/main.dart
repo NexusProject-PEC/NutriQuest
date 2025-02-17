@@ -12,7 +12,7 @@ import 'about_us.dart';
 import 'water.dart';
 import 'search_page.dart';
 import 'user_info_page.dart'; // Import WaterPage
-
+import 'body_fat_page.dart';
 // WorkManager callback function
 void callbackDispatcher() {
   Workmanager().executeTask((task, inputData) {
@@ -236,7 +236,7 @@ class NutrientHomePage extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => UserInfoPage()),
+                      MaterialPageRoute(builder: (context) => BodyFatLander()),
                     );
                   },
                 ),
