@@ -8,8 +8,9 @@ class AboutUsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("About Us"),
+        title: Text("About Us",style: TextStyle(fontWeight: FontWeight.bold)),
         backgroundColor: Colors.green,
+        foregroundColor: Colors.white,
         centerTitle: true,
         elevation: 0,
       ),
@@ -88,37 +89,6 @@ class AboutUsPage extends StatelessWidget {
                 "Explore different nutrients categories", Icons.eco),
             _buildFeatureCard(
                 "Get personalized exercise suggestions", Icons.fitness_center),
-
-            SizedBox(height: 30),
-
-            // Team Section
-            Text(
-              "Meet The Team",
-              style: GoogleFonts.poppins(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black),
-            ),
-            SizedBox(height: 10),
-            // Wrap widget to arrange team members in two rows
-            GridView.count(
-              shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
-              crossAxisCount: 2,
-              mainAxisSpacing: 20,
-              crossAxisSpacing: 20,
-              children: [
-                _buildTeamMember(
-                    "assets/normal.png", "Deva Jeshurun D C", "Founder"),
-                _buildTeamMember(
-                    "assets/normal.png", "Arun Pradeep", "Lead Developer"),
-                _buildTeamMember(
-                    "assets/normal.png", "Akash Raj", "Marketing Strategist"),
-                _buildTeamMember(
-                    "assets/normal.png", "Aadhi Rajan", "Marketing Strategist"),
-              ],
-            ),
-
             SizedBox(height: 30),
 
             // Contact Us Section
@@ -163,28 +133,6 @@ class AboutUsPage extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-
-  // Team member card widget
-  Widget _buildTeamMember(String imagePath, String name, String role) {
-    return Column(
-      children: [
-        CircleAvatar(
-          radius: 50,
-          backgroundImage: AssetImage(imagePath),
-        ),
-        SizedBox(height: 10),
-        Text(
-          name,
-          style: GoogleFonts.poppins(
-              fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black),
-        ),
-        Text(
-          role,
-          style: GoogleFonts.poppins(fontSize: 14, color: Colors.grey[600]),
-        ),
-      ],
     );
   }
 }

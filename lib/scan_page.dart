@@ -37,7 +37,10 @@ class _ScanPageState extends State<ScanPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Barcode Scanner")),
+      appBar: AppBar(title: const Text("Barcode Scanner",style: TextStyle(fontWeight: FontWeight.bold),),
+      backgroundColor: Colors.green,
+      foregroundColor: Colors.white,
+      ),
       body: Center(
         child: _isLoading
             ? const CircularProgressIndicator()

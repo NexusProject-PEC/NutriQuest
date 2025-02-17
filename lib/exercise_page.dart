@@ -7,8 +7,9 @@ class ExercisePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Select Your Weight Level"),
+        title: Text("Select Your Weight Level",style: TextStyle(fontWeight: FontWeight.bold)),
         backgroundColor: Colors.green,
+        foregroundColor: Colors.white,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

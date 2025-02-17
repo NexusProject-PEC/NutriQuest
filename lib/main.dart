@@ -87,9 +87,10 @@ class NutrientHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Nutrient Checker"),
+        title: Text("Nutrient Checker",style: TextStyle(fontWeight: FontWeight.bold)),
         centerTitle: true,
         backgroundColor: Colors.green,
+        foregroundColor: Colors.white,
         elevation: 0,
         leading: Builder(
           builder: (context) => IconButton(

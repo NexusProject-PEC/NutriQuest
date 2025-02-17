@@ -11,7 +11,9 @@ class BodyFatProgressPage extends StatelessWidget {
   Widget build(BuildContext context) {
     if (progressData.isEmpty) {
       return Scaffold(
-        appBar: AppBar(title: Text("Body Fat Progress")),
+        appBar: AppBar(title: Text("Body Fat Progress",style: TextStyle(fontWeight: FontWeight.bold)),
+        backgroundColor: Colors.green,
+        foregroundColor: Colors.white,),
         body: Center(
           child: Text(
             "No progress data available.\nPlease add data first.",

@@ -46,7 +46,7 @@ class _HistoryPageState extends State<HistoryPage> {
       appBar: AppBar(
         title: const Text("Scan History",
             style: TextStyle(fontWeight: FontWeight.bold)),
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.green,
         foregroundColor: Colors.white,
       ),
       body: _scannedProducts.isEmpty

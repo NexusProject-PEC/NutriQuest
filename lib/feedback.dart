@@ -25,8 +25,9 @@ class _FeedBackState extends State<FeedBack> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Feedback"),
+        title: Text("Feedback",style: TextStyle(fontWeight: FontWeight.bold)),
         backgroundColor: Colors.green,
+        foregroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
         // This makes the content scrollable
