@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:math' as math;
-import 'package:workmanager/workmanager.dart'; // WorkManager import
 import 'scan_page.dart';
 import 'history_page.dart';
 import 'exercise_page.dart';
@@ -13,29 +12,7 @@ import 'water.dart';
 import 'search_page.dart';
 import 'user_info_page.dart'; // Import WaterPage
 import 'body_fat_page.dart';
-// WorkManager callback function
-void callbackDispatcher() {
-  Workmanager().executeTask((task, inputData) {
-    print("Background task executed: $task");
-    return Future.value(true);
-  });
-}
-
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
-  // Initialize WorkManager
-  await Workmanager().initialize(
-    callbackDispatcher,
-    isInDebugMode: true, // Set to false in production
-  );
-
-  // Register a simple background task
-  await Workmanager().registerOneOffTask(
-    "uniqueTaskId",
-    "simpleTask",
-  );
-
+void main() {
   runApp(NutrientApp());
 }
 
