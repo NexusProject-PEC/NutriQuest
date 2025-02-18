@@ -880,5 +880,2877 @@
         "protein": 3.5,
         "fat": 1,
         "carbs": 38
+    },
+    {
+        "name": "Banana",
+        "calories": 89,
+        "protein": 1.1,
+        "fat": 0.3,
+        "carbs": 22.8
+    },
+    {
+        "name": "Orange",
+        "calories": 47,
+        "protein": 0.9,
+        "fat": 0.1,
+        "carbs": 11.8
+    },
+    {
+        "name": "Strawberry",
+        "calories": 32,
+        "protein": 0.7,
+        "fat": 0.3,
+        "carbs": 7.7
+    },
+    {
+        "name": "Grapes",
+        "calories": 69,
+        "protein": 0.7,
+        "fat": 0.2,
+        "carbs": 18.1
+    },
+    {
+        "name": "Watermelon",
+        "calories": 30,
+        "protein": 0.6,
+        "fat": 0.2,
+        "carbs": 7.6
+    },
+    {
+        "name": "Mango",
+        "calories": 60,
+        "protein": 0.8,
+        "fat": 0.4,
+        "carbs": 15.0
+    },
+    {
+        "name": "Pineapple",
+        "calories": 50,
+        "protein": 0.5,
+        "fat": 0.1,
+        "carbs": 13.1
+    },
+    {
+        "name": "Papaya",
+        "calories": 43,
+        "protein": 0.5,
+        "fat": 0.3,
+        "carbs": 10.8
+    },
+    {
+        "name": "Durian",
+        "calories": 147,
+        "protein": 1.5,
+        "fat": 5.3,
+        "carbs": 27.1
+    },
+    {
+        "name": "Rambutan",
+        "calories": 68,
+        "protein": 0.9,
+        "fat": 0.2,
+        "carbs": 16.5
+    },
+    {
+        "name": "Mangosteen",
+        "calories": 73,
+        "protein": 0.4,
+        "fat": 0.6,
+        "carbs": 17.9
+    },
+    {
+        "name": "Cranberry",
+        "calories": 46,
+        "protein": 0.4,
+        "fat": 0.1,
+        "carbs": 12.2
+    },
+    {
+        "name": "Gooseberry",
+        "calories": 44,
+        "protein": 0.9,
+        "fat": 0.6,
+        "carbs": 10.2
+    },
+    {
+        "name": "Elderberry",
+        "calories": 73,
+        "protein": 0.7,
+        "fat": 0.5,
+        "carbs": 18.4
+    },
+    {
+        "name": "Starfruit",
+        "calories": 31,
+        "protein": 1.0,
+        "fat": 0.3,
+        "carbs": 6.7
+    },
+    {
+        "name": "Persimmon",
+        "calories": 81,
+        "protein": 0.6,
+        "fat": 0.3,
+        "carbs": 21.0
+    },
+    {
+        "name": "Tamarind",
+        "calories": 239,
+        "protein": 2.8,
+        "fat": 0.6,
+        "carbs": 62.5
+    },
+    {
+        "name": "Mulberry",
+        "calories": 43,
+        "protein": 1.4,
+        "fat": 0.4,
+        "carbs": 9.8
+    },
+    {
+        "name": "Breadfruit",
+        "calories": 103,
+        "protein": 1.1,
+        "fat": 0.2,
+        "carbs": 27.1
+    },
+    {
+        "name": "Ackee",
+        "calories": 151,
+        "protein": 2.9,
+        "fat": 15.2,
+        "carbs": 1.8
+    },
+    {
+        "name": "Cloudberry",
+        "calories": 51,
+        "protein": 2.3,
+        "fat": 0.9,
+        "carbs": 8.6
+    },
+    {
+        "name": "Salak (Snake Fruit)",
+        "calories": 82,
+        "protein": 0.8,
+        "fat": 0.4,
+        "carbs": 21.0
+    },
+    {
+        "name": "Bael Fruit",
+        "calories": 137,
+        "protein": 2.0,
+        "fat": 0.3,
+        "carbs": 34.3
+    },
+    {
+        "name": "Loquat",
+        "calories": 47,
+        "protein": 0.4,
+        "fat": 0.2,
+        "carbs": 12.1
+    },
+    {
+        "name": "Jujube",
+        "calories": 79,
+        "protein": 1.2,
+        "fat": 0.2,
+        "carbs": 20.2
+    },
+    {
+        "name": "Medlar",
+        "calories": 44,
+        "protein": 0.4,
+        "fat": 0.1,
+        "carbs": 10.1
+    },
+    {
+        "name": "Marang",
+        "calories": 95,
+        "protein": 2.3,
+        "fat": 0.9,
+        "carbs": 22.6
+    },
+    {
+        "name": "Feijoa",
+        "calories": 55,
+        "protein": 0.9,
+        "fat": 0.6,
+        "carbs": 13.0
+    },
+    {
+        "name": "Santol",
+        "calories": 56,
+        "protein": 0.5,
+        "fat": 0.1,
+        "carbs": 14.0
+    },
+    {
+        "name": "Cupuaçu",
+        "calories": 250,
+        "protein": 2.0,
+        "fat": 10.0,
+        "carbs": 39.0
+    },
+    {
+        "name": "Soursop",
+        "calories": 66,
+        "protein": 1.0,
+        "fat": 0.3,
+        "carbs": 16.8
+    },
+    {
+        "name": "Chico (Sapodilla)",
+        "calories": 83,
+        "protein": 0.4,
+        "fat": 1.1,
+        "carbs": 20.0
+    },
+    {
+        "name": "Langsat",
+        "calories": 57,
+        "protein": 1.0,
+        "fat": 0.2,
+        "carbs": 15.0
+    },
+    {
+        "name": "Longan",
+        "calories": 60,
+        "protein": 1.3,
+        "fat": 0.1,
+        "carbs": 15.1
+    },
+    {
+        "name": "Chayote",
+        "calories": 19,
+        "protein": 0.8,
+        "fat": 0.1,
+        "carbs": 4.5
+    },
+    {
+        "name": "Horned Melon",
+        "calories": 44,
+        "protein": 1.8,
+        "fat": 0.6,
+        "carbs": 9.2
+    },
+    {
+        "name": "Miracle Fruit",
+        "calories": 25,
+        "protein": 0.4,
+        "fat": 0.2,
+        "carbs": 6.0
+    },
+    {
+        "name": "Black Sapote",
+        "calories": 65,
+        "protein": 1.1,
+        "fat": 0.2,
+        "carbs": 15.2
+    },
+    {
+        "name": "Kei Apple",
+        "calories": 78,
+        "protein": 0.7,
+        "fat": 0.3,
+        "carbs": 18.5
+    },
+    {
+        "name": "Pulasan",
+        "calories": 77,
+        "protein": 1.0,
+        "fat": 0.3,
+        "carbs": 19.2
+    },
+    {
+        "name": "Ambarella",
+        "calories": 41,
+        "protein": 0.5,
+        "fat": 0.3,
+        "carbs": 10.0
+    },
+    {
+        "name": "Barbados Cherry",
+        "calories": 32,
+        "protein": 0.4,
+        "fat": 0.2,
+        "carbs": 7.7
+    },
+    {
+        "name": "Calamansi",
+        "calories": 53,
+        "protein": 0.8,
+        "fat": 0.2,
+        "carbs": 12.3
+    },
+    {
+        "name": "Safou (Butter Fruit)",
+        "calories": 213,
+        "protein": 2.4,
+        "fat": 17.1,
+        "carbs": 11.2
+    },
+    {
+        "name": "Pawpaw",
+        "calories": 80,
+        "protein": 1.2,
+        "fat": 0.4,
+        "carbs": 20.0
+    },
+    {
+        "name": "Noni",
+        "calories": 47,
+        "protein": 0.8,
+        "fat": 0.2,
+        "carbs": 11.5
+    },
+    {
+        "name": "Indian Fig (Prickly Pear)",
+        "calories": 41,
+        "protein": 0.7,
+        "fat": 0.5,
+        "carbs": 9.6
+    },
+    {
+        "name": "Cupuaçu",
+        "calories": 250,
+        "protein": 2.1,
+        "fat": 10.8,
+        "carbs": 39.5
+    },
+    {
+        "name": "Sapucaia Nut Fruit",
+        "calories": 240,
+        "protein": 3.5,
+        "fat": 12.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Bilimbi",
+        "calories": 35,
+        "protein": 0.8,
+        "fat": 0.1,
+        "carbs": 7.5
+    },
+    {
+        "name": "Kaffir Lime",
+        "calories": 30,
+        "protein": 1.0,
+        "fat": 0.3,
+        "carbs": 7.2
+    },
+    {
+        "name": "Cempedak",
+        "calories": 110,
+        "protein": 2.3,
+        "fat": 0.4,
+        "carbs": 25.5
+    },
+    {
+        "name": "Uvaia",
+        "calories": 51,
+        "protein": 0.9,
+        "fat": 0.4,
+        "carbs": 12.5
+    },
+    {
+        "name": "Bacupari",
+        "calories": 43,
+        "protein": 0.7,
+        "fat": 0.3,
+        "carbs": 10.2
+    },
+    {
+        "name": "Grumichama",
+        "calories": 49,
+        "protein": 0.8,
+        "fat": 0.2,
+        "carbs": 11.6
+    },
+    {
+        "name": "Jabuticaba",
+        "calories": 58,
+        "protein": 0.8,
+        "fat": 0.4,
+        "carbs": 15.0
+    },
+    {
+        "name": "Monkey Orange",
+        "calories": 75,
+        "protein": 1.2,
+        "fat": 0.5,
+        "carbs": 18.3
+    },
+    {
+        "name": "Korlan",
+        "calories": 61,
+        "protein": 1.1,
+        "fat": 0.3,
+        "carbs": 14.8
+    },
+    {
+        "name": "Cocona",
+        "calories": 40,
+        "protein": 0.6,
+        "fat": 0.2,
+        "carbs": 9.4
+    },
+    {
+        "name": "Ice Cream Bean",
+        "calories": 92,
+        "protein": 2.2,
+        "fat": 0.8,
+        "carbs": 22.5
+    },
+    {
+        "name": "Bignay",
+        "calories": 55,
+        "protein": 0.7,
+        "fat": 0.3,
+        "carbs": 13.2
+    },
+    {
+        "name": "Achiote",
+        "calories": 65,
+        "protein": 1.3,
+        "fat": 0.5,
+        "carbs": 14.0
+    },
+    {
+        "name": "Soncoya",
+        "calories": 78,
+        "protein": 1.1,
+        "fat": 0.6,
+        "carbs": 18.9
+    },
+    {
+        "name": "Mamey Sapote",
+        "calories": 124,
+        "protein": 1.5,
+        "fat": 0.8,
+        "carbs": 32.0
+    },
+    {
+        "name": "Abiu",
+        "calories": 97,
+        "protein": 1.0,
+        "fat": 0.9,
+        "carbs": 22.5
+    },
+    {
+        "name": "Gac Fruit",
+        "calories": 96,
+        "protein": 2.0,
+        "fat": 0.8,
+        "carbs": 21.4
+    },
+    {
+        "name": "Illawarra Plum",
+        "calories": 59,
+        "protein": 0.9,
+        "fat": 0.2,
+        "carbs": 14.5
+    },
+    {
+        "name": "Pequi",
+        "calories": 124,
+        "protein": 2.0,
+        "fat": 10.1,
+        "carbs": 8.5
+    },
+    {
+        "name": "Olosapo",
+        "calories": 110,
+        "protein": 1.8,
+        "fat": 0.5,
+        "carbs": 27.0
+    },
+    {
+        "name": "Macopa (Wax Apple)",
+        "calories": 26,
+        "protein": 0.6,
+        "fat": 0.3,
+        "carbs": 6.0
+    },
+    {
+        "name": "Gandaria",
+        "calories": 49,
+        "protein": 0.8,
+        "fat": 0.3,
+        "carbs": 12.0
+    },
+    {
+        "name": "Chalta (Elephant Apple)",
+        "calories": 52,
+        "protein": 1.0,
+        "fat": 0.2,
+        "carbs": 13.0
+    },
+    {
+        "name": "Banana",
+        "calories": 89,
+        "protein": 1.1,
+        "fat": 0.3,
+        "carbs": 22.8
+    },
+    {
+        "name": "Banana Juice",
+        "calories": 50,
+        "protein": 0.8,
+        "fat": 0.2,
+        "carbs": 12.0
+    },
+    {
+        "name": "Langsat Juice",
+        "calories": 40,
+        "protein": 0.6,
+        "fat": 0.1,
+        "carbs": 10.0
+    },
+    {
+        "name": "Longan Juice",
+        "calories": 45,
+        "protein": 0.9,
+        "fat": 0.1,
+        "carbs": 11.5
+    },
+    {
+        "name": "Chayote Juice",
+        "calories": 15,
+        "protein": 0.5,
+        "fat": 0.1,
+        "carbs": 3.8
+    },
+    {
+        "name": "Horned Melon Juice",
+        "calories": 30,
+        "protein": 1.2,
+        "fat": 0.3,
+        "carbs": 6.5
+    },
+    {
+        "name": "Miracle Fruit Juice",
+        "calories": 20,
+        "protein": 0.3,
+        "fat": 0.1,
+        "carbs": 5.0
+    },
+    {
+        "name": "Black Sapote Juice",
+        "calories": 55,
+        "protein": 1.0,
+        "fat": 0.2,
+        "carbs": 13.5
+    },
+    {
+        "name": "Kei Apple Juice",
+        "calories": 60,
+        "protein": 0.6,
+        "fat": 0.2,
+        "carbs": 15.0
+    },
+    {
+        "name": "Pulasan Juice",
+        "calories": 65,
+        "protein": 0.9,
+        "fat": 0.2,
+        "carbs": 16.5
+    },
+    {
+        "name": "Ambarella Juice",
+        "calories": 35,
+        "protein": 0.4,
+        "fat": 0.2,
+        "carbs": 8.5
+    },
+    {
+        "name": "Barbados Cherry Juice",
+        "calories": 28,
+        "protein": 0.3,
+        "fat": 0.1,
+        "carbs": 6.5
+    },
+    {
+        "name": "Calamansi Juice",
+        "calories": 40,
+        "protein": 0.6,
+        "fat": 0.1,
+        "carbs": 9.5
+    },
+    {
+        "name": "Safou Juice",
+        "calories": 170,
+        "protein": 1.8,
+        "fat": 12.5,
+        "carbs": 9.0
+    },
+    {
+        "name": "Pawpaw Juice",
+        "calories": 60,
+        "protein": 1.0,
+        "fat": 0.3,
+        "carbs": 15.0
+    },
+    {
+        "name": "Noni Juice",
+        "calories": 35,
+        "protein": 0.6,
+        "fat": 0.1,
+        "carbs": 9.0
+    },
+    {
+        "name": "Indian Fig Juice",
+        "calories": 30,
+        "protein": 0.5,
+        "fat": 0.3,
+        "carbs": 7.5
+    },
+    {
+        "name": "Cupuaçu Juice",
+        "calories": 180,
+        "protein": 1.6,
+        "fat": 8.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Bilimbi Juice",
+        "calories": 25,
+        "protein": 0.6,
+        "fat": 0.1,
+        "carbs": 6.0
+    },
+    {
+        "name": "Kaffir Lime Juice",
+        "calories": 20,
+        "protein": 0.7,
+        "fat": 0.2,
+        "carbs": 5.5
+    },
+    {
+        "name": "Cempedak Juice",
+        "calories": 80,
+        "protein": 1.5,
+        "fat": 0.3,
+        "carbs": 20.0
+    },
+    {
+        "name": "Jabuticaba Juice",
+        "calories": 48,
+        "protein": 0.7,
+        "fat": 0.2,
+        "carbs": 11.0
+    },
+    {
+        "name": "Monkey Orange Juice",
+        "calories": 65,
+        "protein": 1.0,
+        "fat": 0.3,
+        "carbs": 16.0
+    },
+    {
+        "name": "Korlan Juice",
+        "calories": 50,
+        "protein": 0.9,
+        "fat": 0.2,
+        "carbs": 12.5
+    },
+    {
+        "name": "Ice Cream Bean Juice",
+        "calories": 75,
+        "protein": 1.8,
+        "fat": 0.5,
+        "carbs": 18.0
+    },
+    {
+        "name": "Bignay Juice",
+        "calories": 45,
+        "protein": 0.6,
+        "fat": 0.2,
+        "carbs": 11.0
+    },
+    {
+        "name": "Mamey Sapote Juice",
+        "calories": 110,
+        "protein": 1.2,
+        "fat": 0.5,
+        "carbs": 28.0
+    },
+    {
+        "name": "Abiu Juice",
+        "calories": 80,
+        "protein": 0.9,
+        "fat": 0.5,
+        "carbs": 18.5
+    },
+    {
+        "name": "Gac Fruit Juice",
+        "calories": 85,
+        "protein": 1.8,
+        "fat": 0.6,
+        "carbs": 20.0
+    },
+    {
+        "name": "Pequi Juice",
+        "calories": 100,
+        "protein": 1.5,
+        "fat": 8.5,
+        "carbs": 7.0
+    },
+    {
+        "name": "Macopa Juice",
+        "calories": 20,
+        "protein": 0.5,
+        "fat": 0.2,
+        "carbs": 5.0
+    },
+    {
+        "name": "Chalta Juice",
+        "calories": 42,
+        "protein": 0.9,
+        "fat": 0.2,
+        "carbs": 10.5
+    },
+    {
+        "name": "Amla Juice",
+        "calories": 58,
+        "protein": 1.2,
+        "fat": 0.3,
+        "carbs": 14.0
+    },
+    {
+        "name": "Guava Juice",
+        "calories": 68,
+        "protein": 1.6,
+        "fat": 0.4,
+        "carbs": 17.2
+    },
+    {
+        "name": "Pineapple Juice",
+        "calories": 50,
+        "protein": 0.5,
+        "fat": 0.1,
+        "carbs": 13.0
+    },
+    {
+        "name": "Sweet Lime Juice",
+        "calories": 43,
+        "protein": 0.6,
+        "fat": 0.1,
+        "carbs": 10.5
+    },
+    {
+        "name": "Pomegranate Juice",
+        "calories": 83,
+        "protein": 1.0,
+        "fat": 0.4,
+        "carbs": 19.5
+    },
+    {
+        "name": "Mango Juice",
+        "calories": 60,
+        "protein": 0.9,
+        "fat": 0.2,
+        "carbs": 15.0
+    },
+    {
+        "name": "Jackfruit Juice",
+        "calories": 45,
+        "protein": 0.8,
+        "fat": 0.3,
+        "carbs": 11.5
+    },
+    {
+        "name": "Watermelon Juice",
+        "calories": 30,
+        "protein": 0.6,
+        "fat": 0.2,
+        "carbs": 7.5
+    },
+    {
+        "name": "Papaya Juice",
+        "calories": 43,
+        "protein": 0.5,
+        "fat": 0.2,
+        "carbs": 10.5
+    },
+    {
+        "name": "Tamarind Juice",
+        "calories": 75,
+        "protein": 1.2,
+        "fat": 0.3,
+        "carbs": 18.0
+    },
+    {
+        "name": "Lemon Juice",
+        "calories": 22,
+        "protein": 0.5,
+        "fat": 0.1,
+        "carbs": 6.0
+    },
+    {
+        "name": "Coconut Water",
+        "calories": 19,
+        "protein": 0.2,
+        "fat": 0.1,
+        "carbs": 4.0
+    },
+    {
+        "name": "Custard Apple Juice",
+        "calories": 94,
+        "protein": 1.0,
+        "fat": 0.3,
+        "carbs": 23.5
+    },
+    {
+        "name": "Bel Juice",
+        "calories": 82,
+        "protein": 1.5,
+        "fat": 0.2,
+        "carbs": 21.0
+    },
+    {
+        "name": "Sugarcane Juice",
+        "calories": 83,
+        "protein": 0.5,
+        "fat": 0.1,
+        "carbs": 22.0
+    },
+    {
+        "name": "Ginger Lemon Juice",
+        "calories": 30,
+        "protein": 0.2,
+        "fat": 0.1,
+        "carbs": 7.2
+    },
+    {
+        "name": "Soursop Juice",
+        "calories": 58,
+        "protein": 1.0,
+        "fat": 0.3,
+        "carbs": 14.5
+    },
+    {
+        "name": "Pineapple Mint Juice",
+        "calories": 60,
+        "protein": 0.6,
+        "fat": 0.2,
+        "carbs": 15.3
+    },
+    {
+        "name": "Rose Water Lemonade",
+        "calories": 50,
+        "protein": 0.3,
+        "fat": 0.1,
+        "carbs": 13.0
+    },
+    {
+        "name": "Chikoo Juice",
+        "calories": 83,
+        "protein": 1.2,
+        "fat": 0.5,
+        "carbs": 22.0
+    },
+    {
+        "name": "Mulberry Juice",
+        "calories": 43,
+        "protein": 0.8,
+        "fat": 0.3,
+        "carbs": 10.5
+    },
+    {
+        "name": "Apple Juice",
+        "calories": 52,
+        "protein": 0.5,
+        "fat": 0.2,
+        "carbs": 13.5
+    },
+    {
+        "name": "Pear Juice",
+        "calories": 57,
+        "protein": 0.6,
+        "fat": 0.2,
+        "carbs": 14.0
+    },
+    {
+        "name": "Avocado Juice",
+        "calories": 100,
+        "protein": 1.3,
+        "fat": 9.5,
+        "carbs": 5.0
+    },
+    {
+        "name": "Dragon Fruit Juice",
+        "calories": 50,
+        "protein": 1.1,
+        "fat": 0.3,
+        "carbs": 12.3
+    },
+    {
+        "name": "Litchi Juice",
+        "calories": 66,
+        "protein": 0.5,
+        "fat": 0.1,
+        "carbs": 17.0
+    },
+    {
+        "name": "Fig Juice",
+        "calories": 74,
+        "protein": 1.0,
+        "fat": 0.3,
+        "carbs": 19.5
+    },
+    {
+        "name": "Cucumber Juice",
+        "calories": 15,
+        "protein": 0.5,
+        "fat": 0.1,
+        "carbs": 3.0
+    },
+    {
+        "name": "Grapefruit Juice",
+        "calories": 39,
+        "protein": 0.6,
+        "fat": 0.1,
+        "carbs": 9.8
+    },
+    {
+        "name": "Plum Juice",
+        "calories": 46,
+        "protein": 0.5,
+        "fat": 0.2,
+        "carbs": 11.2
+    },
+    {
+        "name": "Tamarillo Juice",
+        "calories": 47,
+        "protein": 0.6,
+        "fat": 0.3,
+        "carbs": 12.0
+    },
+    {
+        "name": "Papaya Pineapple Juice",
+        "calories": 55,
+        "protein": 0.7,
+        "fat": 0.2,
+        "carbs": 14.5
+    },
+    {
+        "name": "Peach Juice",
+        "calories": 39,
+        "protein": 0.4,
+        "fat": 0.2,
+        "carbs": 9.5
+    },
+    {
+        "name": "Apricot Juice",
+        "calories": 48,
+        "protein": 0.6,
+        "fat": 0.3,
+        "carbs": 12.2
+    },
+    {
+        "name": "Cranberry Juice",
+        "calories": 46,
+        "protein": 0.5,
+        "fat": 0.1,
+        "carbs": 12.0
+    },
+    {
+        "name": "Kokum Juice",
+        "calories": 28,
+        "protein": 0.3,
+        "fat": 0.1,
+        "carbs": 7.0
+    },
+    {
+        "name": "Bael Fruit Juice",
+        "calories": 72,
+        "protein": 1.5,
+        "fat": 0.2,
+        "carbs": 18.5
+    },
+    {
+        "name": "Raspberry Juice",
+        "calories": 52,
+        "protein": 0.7,
+        "fat": 0.3,
+        "carbs": 12.5
+    },
+    {
+        "name": "Blackberry Juice",
+        "calories": 43,
+        "protein": 0.7,
+        "fat": 0.3,
+        "carbs": 10.5
+    },
+    {
+        "name": "Blueberry Juice",
+        "calories": 57,
+        "protein": 0.7,
+        "fat": 0.3,
+        "carbs": 14.0
+    },
+    {
+        "name": "Strawberry Juice",
+        "calories": 32,
+        "protein": 0.6,
+        "fat": 0.2,
+        "carbs": 7.5
+    },
+    {
+        "name": "Gooseberry Juice",
+        "calories": 44,
+        "protein": 0.8,
+        "fat": 0.3,
+        "carbs": 10.5
+    },
+    {
+        "name": "Elderberry Juice",
+        "calories": 73,
+        "protein": 0.7,
+        "fat": 0.5,
+        "carbs": 18.5
+    },
+    {
+        "name": "Starfruit Juice",
+        "calories": 31,
+        "protein": 1.0,
+        "fat": 0.3,
+        "carbs": 6.5
+    },
+    {
+        "name": "Persimmon Juice",
+        "calories": 81,
+        "protein": 0.6,
+        "fat": 0.3,
+        "carbs": 21.0
+    },
+    {
+        "name": "Mango Juice",
+        "calories": 60,
+        "protein": 0.9,
+        "fat": 0.4,
+        "carbs": 15.0
+    },
+    {
+        "name": "Medu Vada",
+        "calories": 85,
+        "protein": 3.2,
+        "fat": 3.5,
+        "carbs": 12.0
+    },
+    {
+        "name": "Masala Vada",
+        "calories": 110,
+        "protein": 4.5,
+        "fat": 6.0,
+        "carbs": 14.5
+    },
+    {
+        "name": "Fried Rice",
+        "calories": 230,
+        "protein": 6.5,
+        "fat": 9.0,
+        "carbs": 34.0
+    },
+    {
+        "name": "Veg Burger",
+        "calories": 280,
+        "protein": 8.0,
+        "fat": 12.5,
+        "carbs": 35.0
+    },
+    {
+        "name": "Cheese Pizza",
+        "calories": 300,
+        "protein": 12.0,
+        "fat": 15.0,
+        "carbs": 32.0
+    },
+    {
+        "name": "Chicken Burger",
+        "calories": 350,
+        "protein": 22.0,
+        "fat": 15.0,
+        "carbs": 40.0
+    },
+    {
+        "name": "Veg Pizza",
+        "calories": 270,
+        "protein": 10.0,
+        "fat": 13.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "French Fries",
+        "calories": 220,
+        "protein": 3.0,
+        "fat": 10.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Chicken Nuggets",
+        "calories": 270,
+        "protein": 12.0,
+        "fat": 14.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Cheese Fries",
+        "calories": 350,
+        "protein": 8.0,
+        "fat": 18.0,
+        "carbs": 40.0
+    },
+    {
+        "name": "Vegetable Wrap",
+        "calories": 210,
+        "protein": 6.5,
+        "fat": 7.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Falafel Wrap",
+        "calories": 320,
+        "protein": 12.0,
+        "fat": 15.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Hot Dog",
+        "calories": 290,
+        "protein": 8.0,
+        "fat": 16.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Taco",
+        "calories": 200,
+        "protein": 7.0,
+        "fat": 9.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Chicken Shawarma",
+        "calories": 350,
+        "protein": 20.0,
+        "fat": 17.0,
+        "carbs": 32.0
+    },
+    {
+        "name": "Veg Shawarma",
+        "calories": 270,
+        "protein": 9.0,
+        "fat": 14.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Pasta (Carbonara)",
+        "calories": 420,
+        "protein": 14.0,
+        "fat": 18.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Spaghetti Bolognese",
+        "calories": 380,
+        "protein": 16.0,
+        "fat": 14.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Paneer Tikka",
+        "calories": 200,
+        "protein": 18.0,
+        "fat": 10.0,
+        "carbs": 10.0
+    },
+    {
+        "name": "Kebabs",
+        "calories": 250,
+        "protein": 18.0,
+        "fat": 15.0,
+        "carbs": 5.0
+    },
+    {
+        "name": "Chili Cheese Toast",
+        "calories": 330,
+        "protein": 7.0,
+        "fat": 18.0,
+        "carbs": 38.0
+    },
+    {
+        "name": "Corn & Cheese Sandwich",
+        "calories": 250,
+        "protein": 8.0,
+        "fat": 12.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Vegetable Spring Roll",
+        "calories": 180,
+        "protein": 4.0,
+        "fat": 8.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Cheese Croissant",
+        "calories": 300,
+        "protein": 9.0,
+        "fat": 15.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Chicken Caesar Salad",
+        "calories": 350,
+        "protein": 22.0,
+        "fat": 18.0,
+        "carbs": 15.0
+    },
+    {
+        "name": "Chicken Fajitas",
+        "calories": 400,
+        "protein": 25.0,
+        "fat": 18.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Veg Fajitas",
+        "calories": 350,
+        "protein": 8.0,
+        "fat": 14.0,
+        "carbs": 40.0
+    },
+    {
+        "name": "Chowmein",
+        "calories": 290,
+        "protein": 7.0,
+        "fat": 14.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Prawn Biryani",
+        "calories": 450,
+        "protein": 20.0,
+        "fat": 18.0,
+        "carbs": 50.0
+    },
+    {
+        "name": "Chicken Biryani",
+        "calories": 400,
+        "protein": 18.0,
+        "fat": 15.0,
+        "carbs": 50.0
+    },
+    {
+        "name": "Sushi Rolls",
+        "calories": 240,
+        "protein": 10.0,
+        "fat": 7.0,
+        "carbs": 32.0
+    },
+    {
+        "name": "Crispy Chicken Sandwich",
+        "calories": 420,
+        "protein": 25.0,
+        "fat": 20.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Steak Fries",
+        "calories": 290,
+        "protein": 3.0,
+        "fat": 16.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Waffle Fries",
+        "calories": 310,
+        "protein": 4.0,
+        "fat": 17.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Mushroom Risotto",
+        "calories": 380,
+        "protein": 8.0,
+        "fat": 15.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Fish and Chips",
+        "calories": 450,
+        "protein": 22.0,
+        "fat": 20.0,
+        "carbs": 50.0
+    },
+    {
+        "name": "Falafel",
+        "calories": 170,
+        "protein": 6.0,
+        "fat": 8.0,
+        "carbs": 22.0
+    },
+    {
+        "name": "Egg Salad Sandwich",
+        "calories": 330,
+        "protein": 12.0,
+        "fat": 18.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Paneer Tikka Burger",
+        "calories": 350,
+        "protein": 15.0,
+        "fat": 18.0,
+        "carbs": 32.0
+    },
+    {
+        "name": "Pasta Salad",
+        "calories": 280,
+        "protein": 8.0,
+        "fat": 14.0,
+        "carbs": 34.0
+    },
+    {
+        "name": "Crispy Veg Wrap",
+        "calories": 290,
+        "protein": 10.0,
+        "fat": 12.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Cheese Garlic Bread",
+        "calories": 310,
+        "protein": 7.0,
+        "fat": 16.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Veg Sizzler",
+        "calories": 400,
+        "protein": 14.0,
+        "fat": 22.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Chicken Poppers",
+        "calories": 270,
+        "protein": 13.0,
+        "fat": 14.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Veg Manchurian",
+        "calories": 320,
+        "protein": 6.0,
+        "fat": 16.0,
+        "carbs": 36.0
+    },
+    {
+        "name": "Pizza Roll",
+        "calories": 350,
+        "protein": 12.0,
+        "fat": 15.0,
+        "carbs": 38.0
+    },
+    {
+        "name": "Chana Chaat",
+        "calories": 180,
+        "protein": 8.0,
+        "fat": 8.0,
+        "carbs": 20.0
+    },
+    {
+        "name": "Cheese Quesadilla",
+        "calories": 320,
+        "protein": 10.0,
+        "fat": 14.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Lamb Shawarma",
+        "calories": 380,
+        "protein": 24.0,
+        "fat": 18.0,
+        "carbs": 40.0
+    },
+    {
+        "name": "Zinger Burger",
+        "calories": 450,
+        "protein": 25.0,
+        "fat": 22.0,
+        "carbs": 42.0
+    },
+    {
+        "name": "Chicken Biryani Wrap",
+        "calories": 430,
+        "protein": 20.0,
+        "fat": 18.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Cheese Sandwich",
+        "calories": 310,
+        "protein": 8.0,
+        "fat": 14.0,
+        "carbs": 32.0
+    },
+    {
+        "name": "Pineapple Pizza",
+        "calories": 330,
+        "protein": 12.0,
+        "fat": 15.0,
+        "carbs": 38.0
+    },
+    {
+        "name": "Garlic Parmesan Wings",
+        "calories": 320,
+        "protein": 18.0,
+        "fat": 20.0,
+        "carbs": 12.0
+    },
+    {
+        "name": "Falafel Pita",
+        "calories": 280,
+        "protein": 10.0,
+        "fat": 12.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Lemon Rice",
+        "calories": 200,
+        "protein": 4.0,
+        "fat": 7.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Veg Pakora",
+        "calories": 180,
+        "protein": 3.0,
+        "fat": 9.0,
+        "carbs": 22.0
+    },
+    {
+        "name": "Bacon Cheeseburger",
+        "calories": 550,
+        "protein": 30.0,
+        "fat": 30.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Pepperoni Pizza",
+        "calories": 380,
+        "protein": 15.0,
+        "fat": 22.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Chili Con Carne",
+        "calories": 330,
+        "protein": 18.0,
+        "fat": 16.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Pasta Primavera",
+        "calories": 360,
+        "protein": 12.0,
+        "fat": 14.0,
+        "carbs": 44.0
+    },
+    {
+        "name": "Veg Burger with Avocado",
+        "calories": 400,
+        "protein": 18.0,
+        "fat": 20.0,
+        "carbs": 40.0
+    },
+    {
+        "name": "Chicken Caesar Wrap",
+        "calories": 370,
+        "protein": 25.0,
+        "fat": 16.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Buffalo Wings",
+        "calories": 290,
+        "protein": 15.0,
+        "fat": 18.0,
+        "carbs": 12.0
+    },
+    {
+        "name": "Chicken Quesadilla",
+        "calories": 400,
+        "protein": 20.0,
+        "fat": 20.0,
+        "carbs": 38.0
+    },
+    {
+        "name": "Grilled Chicken Wrap",
+        "calories": 320,
+        "protein": 22.0,
+        "fat": 14.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Vegetable Chowmein",
+        "calories": 270,
+        "protein": 7.0,
+        "fat": 9.0,
+        "carbs": 38.0
+    },
+    {
+        "name": "Mushroom Burger",
+        "calories": 330,
+        "protein": 12.0,
+        "fat": 18.0,
+        "carbs": 32.0
+    },
+    {
+        "name": "Grilled Cheese Sandwich",
+        "calories": 310,
+        "protein": 10.0,
+        "fat": 16.0,
+        "carbs": 32.0
+    },
+    {
+        "name": "Tandoori Chicken",
+        "calories": 250,
+        "protein": 28.0,
+        "fat": 12.0,
+        "carbs": 10.0
+    },
+    {
+        "name": "BBQ Chicken Pizza",
+        "calories": 390,
+        "protein": 18.0,
+        "fat": 20.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Vegetable Samosa",
+        "calories": 140,
+        "protein": 3.0,
+        "fat": 8.0,
+        "carbs": 18.0
+    },
+    {
+        "name": "Chicken Tikka Roll",
+        "calories": 400,
+        "protein": 25.0,
+        "fat": 18.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Veg Cheese Sandwich",
+        "calories": 330,
+        "protein": 10.0,
+        "fat": 15.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Cheese Stuffed Garlic Bread",
+        "calories": 320,
+        "protein": 8.0,
+        "fat": 18.0,
+        "carbs": 32.0
+    },
+    {
+        "name": "Veg Nuggets",
+        "calories": 270,
+        "protein": 8.0,
+        "fat": 14.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Beef Nachos",
+        "calories": 410,
+        "protein": 18.0,
+        "fat": 22.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Spicy Chicken Wings",
+        "calories": 320,
+        "protein": 20.0,
+        "fat": 18.0,
+        "carbs": 10.0
+    },
+    {
+        "name": "Chili Cheese Fries",
+        "calories": 390,
+        "protein": 7.0,
+        "fat": 18.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "BBQ Veg Burger",
+        "calories": 370,
+        "protein": 15.0,
+        "fat": 16.0,
+        "carbs": 40.0
+    },
+    {
+        "name": "Beef Sliders",
+        "calories": 280,
+        "protein": 15.0,
+        "fat": 18.0,
+        "carbs": 22.0
+    },
+    {
+        "name": "Paneer Shawarma",
+        "calories": 350,
+        "protein": 20.0,
+        "fat": 16.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Mac and Cheese Bites",
+        "calories": 300,
+        "protein": 9.0,
+        "fat": 15.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Spicy Veg Wrap",
+        "calories": 290,
+        "protein": 10.0,
+        "fat": 12.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Pulled Pork Sandwich",
+        "calories": 500,
+        "protein": 30.0,
+        "fat": 26.0,
+        "carbs": 48.0
+    },
+    {
+        "name": "Mushroom Risotto",
+        "calories": 380,
+        "protein": 12.0,
+        "fat": 18.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Crispy Fish Tacos",
+        "calories": 330,
+        "protein": 18.0,
+        "fat": 14.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Falafel Wrap",
+        "calories": 280,
+        "protein": 12.0,
+        "fat": 10.0,
+        "carbs": 38.0
+    },
+    {
+        "name": "Crispy Veg Pizza",
+        "calories": 350,
+        "protein": 15.0,
+        "fat": 20.0,
+        "carbs": 32.0
+    },
+    {
+        "name": "Cheese Baked Potatoes",
+        "calories": 400,
+        "protein": 9.0,
+        "fat": 22.0,
+        "carbs": 42.0
+    },
+    {
+        "name": "Tandoori Paneer Wrap",
+        "calories": 420,
+        "protein": 23.0,
+        "fat": 18.0,
+        "carbs": 38.0
+    },
+    {
+        "name": "Cheese Omelette Sandwich",
+        "calories": 350,
+        "protein": 15.0,
+        "fat": 20.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Veg Burrito",
+        "calories": 400,
+        "protein": 13.0,
+        "fat": 14.0,
+        "carbs": 48.0
+    },
+    {
+        "name": "Grilled Chicken Caesar Salad",
+        "calories": 280,
+        "protein": 22.0,
+        "fat": 16.0,
+        "carbs": 12.0
+    },
+    {
+        "name": "Veg Tacos",
+        "calories": 270,
+        "protein": 8.0,
+        "fat": 12.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Chicken Fajitas",
+        "calories": 380,
+        "protein": 30.0,
+        "fat": 18.0,
+        "carbs": 40.0
+    },
+    {
+        "name": "Pork Schnitzel",
+        "calories": 500,
+        "protein": 36.0,
+        "fat": 28.0,
+        "carbs": 40.0
+    },
+    {
+        "name": "Veggie Spring Rolls",
+        "calories": 220,
+        "protein": 6.0,
+        "fat": 10.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Beef Tacos",
+        "calories": 380,
+        "protein": 25.0,
+        "fat": 22.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Cheese and Tomato Sandwich",
+        "calories": 310,
+        "protein": 10.0,
+        "fat": 15.0,
+        "carbs": 33.0
+    },
+    {
+        "name": "Chili Dog",
+        "calories": 400,
+        "protein": 18.0,
+        "fat": 22.0,
+        "carbs": 38.0
+    },
+    {
+        "name": "Falafel Plate",
+        "calories": 350,
+        "protein": 12.0,
+        "fat": 20.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Chicken Caesar Wrap",
+        "calories": 370,
+        "protein": 25.0,
+        "fat": 16.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Veg Pakora Wrap",
+        "calories": 300,
+        "protein": 8.0,
+        "fat": 12.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Pork Buns",
+        "calories": 420,
+        "protein": 25.0,
+        "fat": 22.0,
+        "carbs": 38.0
+    },
+    {
+        "name": "Veg Tikka Pizza",
+        "calories": 370,
+        "protein": 15.0,
+        "fat": 18.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Pav Bhaji",
+        "calories": 450,
+        "protein": 12.0,
+        "fat": 20.0,
+        "carbs": 55.0
+    },
+    {
+        "name": "Vada Pav",
+        "calories": 350,
+        "protein": 6.0,
+        "fat": 18.0,
+        "carbs": 42.0
+    },
+    {
+        "name": "Bhel Puri",
+        "calories": 220,
+        "protein": 4.0,
+        "fat": 8.0,
+        "carbs": 34.0
+    },
+    {
+        "name": "Dhokla",
+        "calories": 150,
+        "protein": 5.0,
+        "fat": 2.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Samosa",
+        "calories": 250,
+        "protein": 6.0,
+        "fat": 15.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Aloo Tikki",
+        "calories": 230,
+        "protein": 5.0,
+        "fat": 12.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Chole Bhature",
+        "calories": 600,
+        "protein": 15.0,
+        "fat": 22.0,
+        "carbs": 80.0
+    },
+    {
+        "name": "Pani Puri",
+        "calories": 150,
+        "protein": 4.0,
+        "fat": 5.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Sev Puri",
+        "calories": 180,
+        "protein": 4.0,
+        "fat": 8.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Pakora",
+        "calories": 200,
+        "protein": 6.0,
+        "fat": 12.0,
+        "carbs": 22.0
+    },
+    {
+        "name": "Kathi Roll",
+        "calories": 350,
+        "protein": 18.0,
+        "fat": 15.0,
+        "carbs": 40.0
+    },
+    {
+        "name": "Pesarattu",
+        "calories": 270,
+        "protein": 12.0,
+        "fat": 9.0,
+        "carbs": 34.0
+    },
+    {
+        "name": "Momos",
+        "calories": 220,
+        "protein": 8.0,
+        "fat": 8.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Methi Thepla",
+        "calories": 250,
+        "protein": 7.0,
+        "fat": 10.0,
+        "carbs": 32.0
+    },
+    {
+        "name": "Pesarattu Dosa",
+        "calories": 290,
+        "protein": 12.0,
+        "fat": 10.0,
+        "carbs": 38.0
+    },
+    {
+        "name": "Dahi Puri",
+        "calories": 180,
+        "protein": 3.0,
+        "fat": 6.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Tandoori Chicken",
+        "calories": 250,
+        "protein": 20.0,
+        "fat": 15.0,
+        "carbs": 5.0
+    },
+    {
+        "name": "Sizzler",
+        "calories": 500,
+        "protein": 25.0,
+        "fat": 30.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Upma",
+        "calories": 200,
+        "protein": 5.0,
+        "fat": 6.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Bhindi Masala",
+        "calories": 120,
+        "protein": 3.0,
+        "fat": 6.0,
+        "carbs": 18.0
+    },
+    {
+        "name": "Biryani (Vegetable)",
+        "calories": 400,
+        "protein": 10.0,
+        "fat": 15.0,
+        "carbs": 55.0
+    },
+    {
+        "name": "Biryani (Chicken)",
+        "calories": 450,
+        "protein": 22.0,
+        "fat": 20.0,
+        "carbs": 50.0
+    },
+    {
+        "name": "Dum Aloo",
+        "calories": 300,
+        "protein": 7.0,
+        "fat": 18.0,
+        "carbs": 32.0
+    },
+    {
+        "name": "Aloo Gobi",
+        "calories": 180,
+        "protein": 4.0,
+        "fat": 8.0,
+        "carbs": 22.0
+    },
+    {
+        "name": "Baingan Bharta",
+        "calories": 220,
+        "protein": 5.0,
+        "fat": 10.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Rajma Chawal",
+        "calories": 350,
+        "protein": 12.0,
+        "fat": 8.0,
+        "carbs": 55.0
+    },
+    {
+        "name": "Masala Dosa",
+        "calories": 280,
+        "protein": 6.0,
+        "fat": 10.0,
+        "carbs": 40.0
+    },
+    {
+        "name": "Idli Sambhar",
+        "calories": 180,
+        "protein": 6.0,
+        "fat": 3.0,
+        "carbs": 35.0
+    }, 
+   
+    {
+        "name": "Chana Chaat",
+        "calories": 220,
+        "protein": 8.0,
+        "fat": 6.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Khaman",
+        "calories": 200,
+        "protein": 5.0,
+        "fat": 8.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Gobi Manchurian",
+        "calories": 320,
+        "protein": 5.0,
+        "fat": 15.0,
+        "carbs": 40.0
+    }, 
+    {
+        "name": "Batata Chaat",
+        "calories": 220,
+        "protein": 6.0,
+        "fat": 8.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Onion Bhaji",
+        "calories": 270,
+        "protein": 5.0,
+        "fat": 15.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Methi Thepla",
+        "calories": 250,
+        "protein": 7.0,
+        "fat": 10.0,
+        "carbs": 32.0
+    },
+    {
+        "name": "Moong Dal Chilla",
+        "calories": 180,
+        "protein": 10.0,
+        "fat": 6.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Pineapple Raita",
+        "calories": 130,
+        "protein": 3.0,
+        "fat": 5.0,
+        "carbs": 18.0
+    },
+    {
+        "name": "Khandvi",
+        "calories": 150,
+        "protein": 5.0,
+        "fat": 3.0,
+        "carbs": 20.0
+    },
+    {
+        "name": "Aloo Gobi Tikki",
+        "calories": 220,
+        "protein": 4.0,
+        "fat": 8.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Kachori",
+        "calories": 240,
+        "protein": 6.0,
+        "fat": 10.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Chana Chaat",
+        "calories": 200,
+        "protein": 8.0,
+        "fat": 5.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Pesarattu",
+        "calories": 270,
+        "protein": 12.0,
+        "fat": 9.0,
+        "carbs": 34.0
+    },
+    {
+        "name": "Dahi ke Kebab",
+        "calories": 180,
+        "protein": 10.0,
+        "fat": 8.0,
+        "carbs": 20.0
+    },
+    {
+        "name": "Ghevar",
+        "calories": 400,
+        "protein": 5.0,
+        "fat": 20.0,
+        "carbs": 50.0
+    },
+    {
+        "name": "Dal Pakwan",
+        "calories": 320,
+        "protein": 12.0,
+        "fat": 15.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Vermicelli Pakora",
+        "calories": 200,
+        "protein": 5.0,
+        "fat": 9.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Khakra",
+        "calories": 180,
+        "protein": 4.0,
+        "fat": 8.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Mysore Pak",
+        "calories": 350,
+        "protein": 5.0,
+        "fat": 15.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Shakarpara",
+        "calories": 220,
+        "protein": 3.0,
+        "fat": 8.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Chana Chaat Puri",
+        "calories": 260,
+        "protein": 8.0,
+        "fat": 12.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Rajma Chaat",
+        "calories": 250,
+        "protein": 8.0,
+        "fat": 7.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Bread Pakora",
+        "calories": 280,
+        "protein": 6.0,
+        "fat": 12.0,
+        "carbs": 34.0
+    },
+    {
+        "name": "Lassi (Sweet)",
+        "calories": 250,
+        "protein": 8.0,
+        "fat": 10.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Soda Shikanji",
+        "calories": 150,
+        "protein": 2.0,
+        "fat": 1.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Aloo Ke Gutke",
+        "calories": 220,
+        "protein": 5.0,
+        "fat": 10.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Jalebi",
+        "calories": 280,
+        "protein": 3.0,
+        "fat": 12.0,
+        "carbs": 38.0
+    },
+    {
+        "name": "Pesarattu Chilla",
+        "calories": 200,
+        "protein": 9.0,
+        "fat": 8.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Gajar Halwa",
+        "calories": 300,
+        "protein": 4.0,
+        "fat": 15.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Chana Samosa",
+        "calories": 220,
+        "protein": 6.0,
+        "fat": 8.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Aloo Papdi Chaat",
+        "calories": 200,
+        "protein": 5.0,
+        "fat": 7.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Corn & Cheese Balls",
+        "calories": 290,
+        "protein": 8.0,
+        "fat": 15.0,
+        "carbs": 32.0
+    },
+    {
+        "name": "Sundal",
+        "calories": 160,
+        "protein": 8.0,
+        "fat": 5.0,
+        "carbs": 18.0
+    },
+    {
+        "name": "Banana Chips",
+        "calories": 180,
+        "protein": 2.0,
+        "fat": 8.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Kari Dosa",
+        "calories": 280,
+        "protein": 7.0,
+        "fat": 15.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Sodhi",
+        "calories": 250,
+        "protein": 7.0,
+        "fat": 12.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Kuzhambu",
+        "calories": 210,
+        "protein": 5.0,
+        "fat": 10.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Mann Chatti Chicken",
+        "calories": 350,
+        "protein": 15.0,
+        "fat": 20.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Vazhakkai Bajji",
+        "calories": 180,
+        "protein": 3.0,
+        "fat": 9.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Kottu Parotta",
+        "calories": 400,
+        "protein": 12.0,
+        "fat": 18.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Kerala Parotta",
+        "calories": 280,
+        "protein": 6.0,
+        "fat": 15.0,
+        "carbs": 32.0
+    },
+    {
+        "name": "Tharavu Curry",
+        "calories": 350,
+        "protein": 20.0,
+        "fat": 18.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Karimeen Pollichathu",
+        "calories": 320,
+        "protein": 22.0,
+        "fat": 20.0,
+        "carbs": 15.0
+    },
+    {
+        "name": "Chakkara Pongal",
+        "calories": 300,
+        "protein": 4.0,
+        "fat": 12.0,
+        "carbs": 40.0
+    },
+    {
+        "name": "Avial",
+        "calories": 150,
+        "protein": 6.0,
+        "fat": 8.0,
+        "carbs": 20.0
+    },
+    {
+        "name": "Puttu with Kadala Curry",
+        "calories": 250,
+        "protein": 10.0,
+        "fat": 7.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Sambar Sadham",
+        "calories": 300,
+        "protein": 8.0,
+        "fat": 10.0,
+        "carbs": 40.0
+    },
+    {
+        "name": "Parippu Vada",
+        "calories": 230,
+        "protein": 7.0,
+        "fat": 9.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Mutton Korma",
+        "calories": 400,
+        "protein": 25.0,
+        "fat": 25.0,
+        "carbs": 20.0
+    },
+    {
+        "name": "Kerala Beef Fry",
+        "calories": 420,
+        "protein": 30.0,
+        "fat": 28.0,
+        "carbs": 15.0
+    },
+    {
+        "name": "Nadan Kozhi Curry",
+        "calories": 350,
+        "protein": 22.0,
+        "fat": 18.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Kadala Curry",
+        "calories": 280,
+        "protein": 12.0,
+        "fat": 8.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Erissery",
+        "calories": 230,
+        "protein": 6.0,
+        "fat": 10.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Fish Moilee",
+        "calories": 350,
+        "protein": 25.0,
+        "fat": 20.0,
+        "carbs": 18.0
+    },
+    {
+        "name": "Sadhya",
+        "calories": 450,
+        "protein": 15.0,
+        "fat": 25.0,
+        "carbs": 50.0
+    },
+    {
+        "name": "Nenthra Pazham Curry",
+        "calories": 280,
+        "protein": 4.0,
+        "fat": 12.0,
+        "carbs": 40.0
+    },
+    {
+        "name": "Meen Pollichathu",
+        "calories": 350,
+        "protein": 28.0,
+        "fat": 20.0,
+        "carbs": 12.0
+    },
+    {
+        "name": "Kappa with Fish Curry",
+        "calories": 300,
+        "protein": 20.0,
+        "fat": 12.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Chemmeen Curry",
+        "calories": 380,
+        "protein": 28.0,
+        "fat": 20.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Kozhi Idichathu",
+        "calories": 350,
+        "protein": 20.0,
+        "fat": 18.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Tharavu Vechathu",
+        "calories": 380,
+        "protein": 22.0,
+        "fat": 20.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Sulaimani Tea",
+        "calories": 40,
+        "protein": 0.5,
+        "fat": 0.0,
+        "carbs": 10.0
+    },
+    {
+        "name": "Pulikachal",
+        "calories": 250,
+        "protein": 6.0,
+        "fat": 8.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Mysore Pak",
+        "calories": 350,
+        "protein": 6.0,
+        "fat": 15.0,
+        "carbs": 40.0
+    },
+    {
+        "name": "Kothu Idli",
+        "calories": 290,
+        "protein": 8.0,
+        "fat": 10.0,
+        "carbs": 38.0
+    },
+    {
+        "name": "Chena Kizhangu Roast",
+        "calories": 220,
+        "protein": 5.0,
+        "fat": 10.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Thoran",
+        "calories": 150,
+        "protein": 5.0,
+        "fat": 7.0,
+        "carbs": 20.0
+    },
+    {
+        "name": "Pesarattu with Upma",
+        "calories": 280,
+        "protein": 10.0,
+        "fat": 9.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Suran Kootu",
+        "calories": 220,
+        "protein": 6.0,
+        "fat": 8.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Kuttu",
+        "calories": 300,
+        "protein": 7.0,
+        "fat": 15.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Kothu Roti with Egg",
+        "calories": 350,
+        "protein": 15.0,
+        "fat": 18.0,
+        "carbs": 40.0
+    },
+    {
+        "name": "Banana Stem Curry",
+        "calories": 180,
+        "protein": 5.0,
+        "fat": 6.0,
+        "carbs": 22.0
+    },
+    {
+        "name": "Mappas",
+        "calories": 280,
+        "protein": 20.0,
+        "fat": 15.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Cherupayar Curry",
+        "calories": 250,
+        "protein": 12.0,
+        "fat": 8.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Vibhavari",
+        "calories": 270,
+        "protein": 8.0,
+        "fat": 12.0,
+        "carbs": 34.0
+    },
+    {
+        "name": "Prawn Moilee",
+        "calories": 320,
+        "protein": 28.0,
+        "fat": 18.0,
+        "carbs": 18.0
+    },
+    {
+        "name": "Nellikka Achar",
+        "calories": 90,
+        "protein": 2.0,
+        "fat": 5.0,
+        "carbs": 10.0
+    },
+    {
+        "name": "Chili Beef Fry",
+        "calories": 380,
+        "protein": 25.0,
+        "fat": 25.0,
+        "carbs": 20.0
+    },
+    {
+        "name": "Unniyappam",
+        "calories": 230,
+        "protein": 3.0,
+        "fat": 10.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Palada Payasam",
+        "calories": 350,
+        "protein": 5.0,
+        "fat": 18.0,
+        "carbs": 50.0
+    },
+    {
+        "name": "Meen Moilee",
+        "calories": 280,
+        "protein": 20.0,
+        "fat": 15.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Pazham Pori",
+        "calories": 210,
+        "protein": 3.0,
+        "fat": 8.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Aloo Masala Dosa",
+        "calories": 330,
+        "protein": 7.0,
+        "fat": 12.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Muthiyal Kuzhambu",
+        "calories": 240,
+        "protein": 8.0,
+        "fat": 10.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Kaalan",
+        "calories": 300,
+        "protein": 6.0,
+        "fat": 15.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Prawn Masala",
+        "calories": 350,
+        "protein": 25.0,
+        "fat": 18.0,
+        "carbs": 20.0
+    },
+    {
+        "name": "Pesarattu Dosa",
+        "calories": 240,
+        "protein": 9.0,
+        "fat": 7.0,
+        "carbs": 34.0
+    },
+    {
+        "name": "Mutton Stew",
+        "calories": 380,
+        "protein": 25.0,
+        "fat": 20.0,
+        "carbs": 22.0
+    },
+    {
+        "name": "Kuttanadu Chicken Curry",
+        "calories": 350,
+        "protein": 20.0,
+        "fat": 18.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Thattai",
+        "calories": 220,
+        "protein": 4.0,
+        "fat": 10.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Kozhi Kurumulagu Curry",
+        "calories": 330,
+        "protein": 20.0,
+        "fat": 18.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Chili Fish Fry",
+        "calories": 400,
+        "protein": 25.0,
+        "fat": 22.0,
+        "carbs": 25.0
+    },
+    {
+        "name": "Fried Tapioca (Kappa Fry)",
+        "calories": 270,
+        "protein": 5.0,
+        "fat": 12.0,
+        "carbs": 40.0
+    },
+    {
+        "name": "Vada Curry",
+        "calories": 290,
+        "protein": 6.0,
+        "fat": 15.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Kanchipuram Idli",
+        "calories": 230,
+        "protein": 7.0,
+        "fat": 8.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Sulaimani",
+        "calories": 50,
+        "protein": 0.0,
+        "fat": 0.0,
+        "carbs": 12.0
+    },
+    {
+        "name": "Puli Inji",
+        "calories": 180,
+        "protein": 2.0,
+        "fat": 5.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Kanji with Fish Curry",
+        "calories": 330,
+        "protein": 20.0,
+        "fat": 15.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Sambar Idli",
+        "calories": 250,
+        "protein": 6.0,
+        "fat": 8.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Aappam with Stew",
+        "calories": 300,
+        "protein": 10.0,
+        "fat": 15.0,
+        "carbs": 30.0
+    },
+    {
+        "name": "Kappa Masala",
+        "calories": 280,
+        "protein": 6.0,
+        "fat": 15.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Nellikka Juice",
+        "calories": 40,
+        "protein": 0.5,
+        "fat": 0.0,
+        "carbs": 10.0
+    },
+    {
+        "name": "Kuthiraivaali Pongal",
+        "calories": 220,
+        "protein": 5.0,
+        "fat": 8.0,
+        "carbs": 28.0
+    },
+    {
+        "name": "Macher Jhol",
+        "calories": 320,
+        "protein": 25.0,
+        "fat": 18.0,
+        "carbs": 22.0
+    },
+    {
+        "name": "Chocolate Cake",
+        "calories": 350,
+        "protein": 6.0,
+        "fat": 15.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Vanilla Cake",
+        "calories": 290,
+        "protein": 5.0,
+        "fat": 12.0,
+        "carbs": 38.0
+    },
+    {
+        "name": "Red Velvet Cake",
+        "calories": 400,
+        "protein": 7.0,
+        "fat": 20.0,
+        "carbs": 50.0
+    },
+    {
+        "name": "Cheesecake",
+        "calories": 450,
+        "protein": 8.0,
+        "fat": 25.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Carrot Cake",
+        "calories": 350,
+        "protein": 6.0,
+        "fat": 18.0,
+        "carbs": 40.0
+    },
+    {
+        "name": "Lemon Cake",
+        "calories": 270,
+        "protein": 5.0,
+        "fat": 10.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Coffee Cake",
+        "calories": 320,
+        "protein": 6.0,
+        "fat": 15.0,
+        "carbs": 42.0
+    },
+    {
+        "name": "Pineapple Upside Down Cake",
+        "calories": 280,
+        "protein": 4.0,
+        "fat": 12.0,
+        "carbs": 38.0
+    },
+    {
+        "name": "Angel Food Cake",
+        "calories": 220,
+        "protein": 5.0,
+        "fat": 1.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Bundt Cake",
+        "calories": 350,
+        "protein": 5.0,
+        "fat": 18.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "German Chocolate Cake",
+        "calories": 450,
+        "protein": 8.0,
+        "fat": 25.0,
+        "carbs": 55.0
+    },
+    {
+        "name": "Banana Cake",
+        "calories": 330,
+        "protein": 4.0,
+        "fat": 10.0,
+        "carbs": 50.0
+    },
+    {
+        "name": "Black Forest Cake",
+        "calories": 500,
+        "protein": 7.0,
+        "fat": 25.0,
+        "carbs": 60.0
+    },
+    {
+        "name": "Mango Cake",
+        "calories": 350,
+        "protein": 4.0,
+        "fat": 15.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Chiffon Cake",
+        "calories": 240,
+        "protein": 5.0,
+        "fat": 7.0,
+        "carbs": 38.0
+    },
+    {
+        "name": "Tiramisu Cake",
+        "calories": 420,
+        "protein": 8.0,
+        "fat": 22.0,
+        "carbs": 50.0
+    },
+    {
+        "name": "Fruit Cake",
+        "calories": 450,
+        "protein": 6.0,
+        "fat": 18.0,
+        "carbs": 60.0
+    },
+    {
+        "name": "Pumpkin Cake",
+        "calories": 330,
+        "protein": 5.0,
+        "fat": 12.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Choco Chip Cake",
+        "calories": 380,
+        "protein": 7.0,
+        "fat": 18.0,
+        "carbs": 50.0
+    },
+    {
+        "name": "Coconut Cake",
+        "calories": 400,
+        "protein": 6.0,
+        "fat": 20.0,
+        "carbs": 45.0
+    },
+    {
+        "name": "Normal Puri",
+        "calories": 250,
+        "protein": 4.0,
+        "fat": 10.0,
+        "carbs": 35.0
+    },
+    {
+        "name": "Parotta",
+        "calories": 300,
+        "protein": 5.0,
+        "fat": 12.0,
+        "carbs": 38.0
     }
+
 ]
