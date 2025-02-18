@@ -23,7 +23,7 @@ class _SearchPageState extends State<SearchPage> {
   }
 
   Future<void> _loadProducts() async {
-    String data = await rootBundle.loadString('assets/products.json');
+    String data = await rootBundle.loadString('assets/products_1.json');
     setState(() {
       _products = json.decode(data);
       _filteredProducts = _products;

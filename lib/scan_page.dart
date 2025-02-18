@@ -41,14 +41,42 @@ class _ScanPageState extends State<ScanPage> {
       backgroundColor: Colors.green,
       foregroundColor: Colors.white,
       ),
-      body: Center(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/scanpage_back.jpeg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(
         child: _isLoading
             ? const CircularProgressIndicator()
-            : ElevatedButton(
-                onPressed: _startScan,
-                child: const Text("Scan Barcode"),
+          : ElevatedButton(
+          onPressed: _startScan,
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.green, // Button color
+            foregroundColor: Colors.white, // Text color
+            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12), // Button size
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12), // Rounded corners
+            ),
+            elevation: 5, // Shadow effect
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.qr_code_scanner,color:Colors.white,size: 24),
+              SizedBox(width: 10),
+              Text(
+                "Scan Barcode",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-      ),
+            ],
+          ),
+        ),
+),
+
+      )
     );
   }
 }
