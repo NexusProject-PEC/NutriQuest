@@ -25,12 +25,58 @@ class _UserInfoPageState extends State<UserInfoPage> {
       double weight = double.parse(weightController.text);
       double bmi = weight / (height * height);
       double genderFactor = (gender == "Male") ? 1 : 0;
+      String getAgeGroup(int age) {
+        if (age < 16) return "U16";
+        if (age >= 17 && age <= 29) return "17-29";
+        if (age >= 30 && age <= 39) return "30-39";
+        if (age >= 40 && age <= 49) return "40-49";
+        if (age >= 50 && age <= 65) return "50-65";
+        if (age > 65) return "A65";
+        return "Unknown";
+      }     
+
+      String ageGroup = getAgeGroup(age);
+      String getFatCat(String ageGroup,String ? gender,double bfp){
+        final Map<String, Map<String, List<int>>> bodyFatRanges = {
+        'U16': {
+          'Male': [5, 12, 18, 25, 30],  // Essential, Athletic, Average, Overweight, Obese
+          'Female': [10, 18, 24, 30, 35]
+        },
+        '17-29': {
+          'Male': [6, 14, 20, 26, 32],
+          'Female': [14, 22, 28, 34, 40]
+        },
+        '30-39': {
+          'Male': [8, 16, 22, 28, 34],
+          'Female': [16, 24, 30, 36, 42]
+        },
+        '40-49': {
+          'Male': [10, 18, 24, 30, 36],
+          'Female': [18, 26, 32, 38, 44]
+        },
+        '50-65': {
+          'Male': [12, 20, 26, 32, 38],
+          'Female': [20, 28, 34, 40, 46]
+        },
+        'A65': {
+          'Male': [14, 22, 28, 34, 40],
+          'Female': [22, 30, 36, 42, 48]
+        }
+      };
+      List<int> ranges= bodyFatRanges[ageGroup]![gender]!;
+      if (bfp < ranges[0]) return 'Essential Fat';
+      if (bfp < ranges[1]) return 'Athletic';
+      if (bfp < ranges[2]) return 'Average';
+      if (bfp < ranges[3]) return 'Overweight';
+      return 'Obese';
+      }
+
 
       // Calculate Body Fat Percentage
       double bfp = (1.20 * bmi) + (0.23 * age) - (10.8 * genderFactor) - 5.4;
 
       // Save progress
-      await saveBFP(bfp);
+      await saveBFP(bfp,getFatCat(ageGroup, gender, bfp));
 
       // Navigate to Progress Page
       Navigator.push(
@@ -44,13 +90,12 @@ class _UserInfoPageState extends State<UserInfoPage> {
     }
   }
 
-  Future<void> saveBFP(double bfp) async {
+  Future<void> saveBFP(double bfp , String fatCategory) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     List<String> history = prefs.getStringList('bfp_history') ?? [];
 
     String entry =
-        jsonEncode({"date": DateTime.now().toIso8601String(), "bfp": bfp});
-
+        jsonEncode({"date": DateTime.now().toIso8601String(), "bfp": bfp , "category": fatCategory});
     history.add(entry);
     await prefs.setStringList('bfp_history', history);
   }

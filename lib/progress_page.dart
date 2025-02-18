@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'progress_graph_page.dart'; // Ensure this file exists and contains the ProgressGraphPage class
+import 'progress_graph_page.dart'; 
 
 class ProgressPage extends StatefulWidget {
   @override
@@ -57,17 +57,18 @@ class _ProgressPageState extends State<ProgressPage> {
                 itemCount: bfpHistory.length,
                 itemBuilder: (context, index) {
                   final entry = bfpHistory[index];
-                  return ListTile(
+                  // final Map<String, String> bfpChart = {};
+                    return ListTile(
                     title: Text(
-                        "BFP: ${(entry['bfp'] as num).toStringAsFixed(2)}%"),
+                      "BFP: ${(entry['bfp'] as num).toStringAsFixed(2)}% (${entry['category']})"),
                     subtitle: Text("Date: ${entry['date']}"),
                     leading: Icon(Icons.fitness_center, color: Colors.blue),
-                  );
+                    );
                 },
               ),
             ),
             SizedBox(height: 20),
-            ElevatedButton(
+            ElevatedButton(     
               onPressed: () {
                 Navigator.push(
                   context,
