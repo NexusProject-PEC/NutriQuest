@@ -10,7 +10,6 @@ class ProgressPage extends StatefulWidget {
 
 class _ProgressPageState extends State<ProgressPage> {
   List<Map<String, dynamic>> bfpHistory = [];
-
   @override
   void initState() {
     super.initState();
