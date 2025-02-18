@@ -1,0 +1,203 @@
+[
+  {
+    "name": "Idli",
+    "quantity": "100 grams",
+    "calories": 116,
+    "protein": 4.0,
+    "fat": 0.8,
+    "carbs": 24.6
+  },
+  {
+    "name": "Dosa",
+    "quantity": "100 grams",
+    "calories": 168,
+    "protein": 3.9,
+    "fat": 4.3,
+    "carbs": 30.7
+  },
+  {
+    "name": "Sambar",
+    "quantity": "100 grams",
+    "calories": 100,
+    "protein": 5.0,
+    "fat": 4.0,
+    "carbs": 11.0
+  },
+  {
+    "name": "Pongal",
+    "quantity": "100 grams",
+    "calories": 183,
+    "protein": 3.5,
+    "fat": 4.0,
+    "carbs": 33.0
+  },
+  {
+    "name": "Vada",
+    "quantity": "100 grams",
+    "calories": 300,
+    "protein": 10.0,
+    "fat": 15.4,
+    "carbs": 30.0
+  },
+  {
+    "name": "Upma",
+    "quantity": "100 grams",
+    "calories": 125,
+    "protein": 2.5,
+    "fat": 5.0,
+    "carbs": 20.0
+  },
+  {
+    "name": "Rasam",
+    "quantity": "100 grams",
+    "calories": 40,
+    "protein": 1.5,
+    "fat": 1.5,
+    "carbs": 5.0
+  },
+  {
+    "name": "Lemon Rice",
+    "quantity": "100 grams",
+    "calories": 165,
+    "protein": 3.0,
+    "fat": 5.0,
+    "carbs": 27.5
+  },
+  {
+    "name": "Curd Rice",
+    "quantity": "100 grams",
+    "calories": 150,
+    "protein": 3.0,
+    "fat": 4.0,
+    "carbs": 25.0
+  },
+  {
+    "name": "Kootu",
+    "quantity": "100 grams",
+    "calories": 90,
+    "protein": 3.0,
+    "fat": 4.0,
+    "carbs": 10.0
+  },
+  {
+    "name": "Kuzhambu",
+    "quantity": "100 grams",
+    "calories": 80,
+    "protein": 2.0,
+    "fat": 4.0,
+    "carbs": 8.0
+  },
+  {
+    "name": "Paniyaram",
+    "quantity": "100 grams",
+    "calories": 233,
+    "protein": 5.0,
+    "fat": 8.3,
+    "carbs": 35.0
+  },
+  {
+    "name": "Filter Coffee",
+    "quantity": "100 grams",
+    "calories": 60,
+    "protein": 1.0,
+    "fat": 2.5,
+    "carbs": 8.0
+  },
+  {
+    "name": "Paruppu (Dal)",
+    "quantity": "100 grams",
+    "calories": 115,
+    "protein": 9.0,
+    "fat": 0.5,
+    "carbs": 20.0
+  },
+  {
+    "name": "Avial",
+    "quantity": "100 grams",
+    "calories": 100,
+    "protein": 2.0,
+    "fat": 5.0,
+    "carbs": 12.0
+  },
+  {
+    "name": "Payasam",
+    "quantity": "100 grams",
+    "calories": 150,
+    "protein": 3.0,
+    "fat": 5.0,
+    "carbs": 22.5
+  },
+  {
+    "name": "Murukku",
+    "quantity": "100 grams",
+    "calories": 500,
+    "protein": 10.0,
+    "fat": 25.0,
+    "carbs": 50.0
+  },
+  {
+    "name": "Thayir Pachadi",
+    "quantity": "100 grams",
+    "calories": 60,
+    "protein": 2.5,
+    "fat": 2.5,
+    "carbs": 7.5
+  },
+  {
+    "name": "Vegetable Kurma",
+    "quantity": "100 grams",
+    "calories": 110,
+    "protein": 2.5,
+    "fat": 5.0,
+    "carbs": 15.0
+  },
+  {
+    "name": "Adai",
+    "quantity": "100 grams",
+    "calories": 200,
+    "protein": 7.0,
+    "fat": 6.0,
+    "carbs": 30.0
+  },
+  {
+    "name": "Puttu",
+    "quantity": "100 grams",
+    "calories": 120,
+    "protein": 3.0,
+    "fat": 2.0,
+    "carbs": 24.0
+  },
+  {
+    "name": "Sevai",
+    "quantity": "100 grams",
+    "calories": 110,
+    "protein": 2.5,
+    "fat": 3.0,
+    "carbs": 17.5
+  },
+  {
+    "name": "Kuzhi Paniyaram",
+    "quantity": "100 grams",
+    "calories": 200,
+    "protein": 4.0,
+    "fat": 8.0,
+    "carbs": 30.0
+  },
+  {
+    "name": "Masala Dosa",
+    "quantity": "100 grams",
+    "calories": 200,
+    "protein": 4.0,
+    "fat": 8.0,
+    "carbs": 30.0
+  },
+  {
+    "name": "Plain Dosa",
+    "quantity": "100 grams",
+    "calories": 120,
+    "protein": 2.5,
+    "fat": 3.0,
+    "carbs": 20.0
+  }
+]
+

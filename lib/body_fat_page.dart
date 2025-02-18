@@ -26,40 +26,105 @@ class BodyFatLander extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           title: Text(
-        "Body Fat Percentange",
-      )),
-      body: Center(
-          child: Column(
-        children: [
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => UserInfoPage(),
-                  ),
-                );
-              },
-              child: Text("New Entry")),
-          ElevatedButton(
-              onPressed: () async {
-                List<Map<String, dynamic>> bfpData = await getBFP();
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        BodyFatProgressPage(progressData: bfpData),
-                  ),
-                );
-              },
-              child: Text("View Progress")),
-          ElevatedButton(
-              onPressed: () async {
-                resetProgress();
-              },
-              child: Text("Reset Progress")),
-        ],
-      )),
+        "Body Fat Percentange",style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      backgroundColor: Colors.green,
+      foregroundColor: Colors.white,),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/body_fat.jpeg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => UserInfoPage(),
+                    ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green, // Button color
+                foregroundColor: Colors.white, // Text color
+                padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12), // Button size
+                shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12), // Rounded corners
+                ),
+                elevation: 5, // Shadow effect
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.add,color:Colors.white,size: 24),
+                    SizedBox(width: 10),
+                    Text("New Entry",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+                  ],
+                )),
+            SizedBox(height: 10,),
+            ElevatedButton(
+                onPressed: () async {
+                  List<Map<String, dynamic>> bfpData = await getBFP();
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          BodyFatProgressPage(progressData: bfpData),
+                    ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green, // Button color
+                foregroundColor: Colors.white, // Text color
+                padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12), // Button size
+                shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12), // Rounded corners
+                ),
+                elevation: 5, // Shadow effect
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.show_chart,color:Colors.white,size: 24),
+                    SizedBox(width: 10),
+                    Text("View Progress",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+                  ],
+                )),
+            SizedBox(height: 10,),
+            ElevatedButton(
+                onPressed: () async {
+                  resetProgress();
+                },
+                style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green, // Button color
+                foregroundColor: Colors.white, // Text color
+                padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12), // Button size
+                shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12), // Rounded corners
+                ),
+                elevation: 5, // Shadow effect
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.refresh,color:Colors.white,size: 24),
+                    SizedBox(width: 10),
+                    Text("Reset Progress",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+                  ],
+                )),
+          ],
+        )),
+      ),
     );
   }
 }

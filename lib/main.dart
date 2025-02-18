@@ -64,7 +64,7 @@ class NutrientHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Nutrient Checker",style: TextStyle(fontWeight: FontWeight.bold)),
+        title: Text("NutriQuest",style: TextStyle(fontWeight: FontWeight.bold)),
         centerTitle: true,
         backgroundColor: Colors.green,
         foregroundColor: Colors.white,
@@ -82,7 +82,7 @@ class NutrientHomePage extends StatelessWidget {
         child: Column(
           children: [
             UserAccountsDrawerHeader(
-              accountName: Text("Nutrient Checker",
+              accountName: Text("NutriQuest",
                   style: GoogleFonts.poppins(
                       fontSize: 18, fontWeight: FontWeight.bold)),
               accountEmail: Text("Stay Healthy!",
@@ -125,7 +125,7 @@ class NutrientHomePage extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Welcome to Nutrient Checker",
+                      "Welcome to NutriQuest",
                       style: GoogleFonts.poppins(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
