@@ -5,11 +5,11 @@ class CalculatePage extends StatelessWidget {
   final List<dynamic> selectedProducts;
 
   const CalculatePage({super.key, required this.selectedProducts});
-
+  
   @override
   Widget build(BuildContext context) {
     double totalCalories =
-        selectedProducts.fold(0, (sum, item) => sum + item['calories']);
+        selectedProducts.fold(0, (sum, item) => sum + (item['calories']/100)*double.parse(item['amount']));
 
     return Scaffold(
       appBar: AppBar(
@@ -44,9 +44,10 @@ class CalculatePage extends StatelessWidget {
               itemCount: selectedProducts.length,
               itemBuilder: (context, index) {
                 var product = selectedProducts[index];
+                double amt = double.parse(product['amount']);
                 return ListTile(
                   title: Text(product['name']),
-                  subtitle: Text("Calories: ${product['calories']} kcal"),
+                  subtitle: Text("Calories: ${(product['calories']/100)*amt} kcal | Proteins: ${(product['protein']/100)*amt} g | Carbs: ${(product['carbs']/100)*amt}"),
                 );
               },
             ),
@@ -74,7 +75,7 @@ class CalculatePage extends StatelessWidget {
       return PieChartSectionData(
         color: colors[index % colors.length], // Cycle through colors
         value: product['calories'].toDouble(),
-        title: "${product['calories']} kcal",
+        title: "${(product['calories']/100) * double.parse(product['amount'])} kcal",
         radius: 60, // Ring thickness
         titleStyle: TextStyle(
             fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),

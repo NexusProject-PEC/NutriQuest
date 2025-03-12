@@ -23,7 +23,7 @@ class _SearchPageState extends State<SearchPage> {
   }
 
   Future<void> _loadProducts() async {
-    String data = await rootBundle.loadString('assets/products_1.json');
+    String data = await rootBundle.loadString('assets/products.json');
     setState(() {
       _products = json.decode(data);
       _filteredProducts = _products;
@@ -39,26 +39,42 @@ class _SearchPageState extends State<SearchPage> {
     });
   }
 
-  void _toggleSelection(dynamic product) {
-    setState(() {
-      if (_selectedProducts.contains(product)) {
-        _selectedProducts.remove(product);
+  bool _isNumeric(String str) {
+    final numericRegex = RegExp(r'^[0-9]+$');
+    return numericRegex.hasMatch(str);
+  }
+
+  void _toggleSelection(dynamic product) async {
+    if (_selectedProducts.any((p) => p['name'] == product['name'])) {
+      setState(() {
+        _selectedProducts.removeWhere((p) => p['name'] == product['name']);
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text("${product['name']} removed"),
-            duration: Duration(milliseconds: 500),
+            duration: Duration(milliseconds: 100),
           ),
         );
-      } else {
-        _selectedProducts.add(product);
+      });
+    } else {
+      // Wait for the user to enter an amount
+      String? amount = await _showPopup(context);
+
+      if (amount != null && amount.isNotEmpty) {
+        setState(() {
+          // Create a new object before adding it
+          var newProduct = Map<String, dynamic>.from(product);
+          newProduct['amount'] = amount;
+          _selectedProducts.add(newProduct);
+        });
+
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text("${product['name']} added"),
-            duration: Duration(milliseconds: 500),
+            duration: Duration(milliseconds: 100),
           ),
         );
       }
-    });
+    }
   }
 
   void _clearSelection() {
@@ -71,9 +87,56 @@ class _SearchPageState extends State<SearchPage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) =>
-            CalculatePage(selectedProducts: _selectedProducts),
+        builder: (context) => CalculatePage(selectedProducts: _selectedProducts),
       ),
+    );
+  }
+
+  Future<String?> _showPopup(BuildContext context) async {
+    TextEditingController amtController = TextEditingController();
+    bool isValid = false;
+
+    return showDialog<String>(
+      context: context,
+      barrierDismissible: false, // Prevents user from closing without choosing
+      builder: (BuildContext context) {
+        return StatefulBuilder(
+          builder: (context, setDialogState) {
+            return AlertDialog(
+              title: Text("Amount of Consumption"),
+              content: TextField(
+                controller: amtController,
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Enter in grams',
+                ),
+                onChanged: (value) {
+                  setDialogState(() {
+                    isValid = _isNumeric(value.trim()) && value.trim().isNotEmpty;
+                  });
+                },
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop(null); // User canceled
+                  },
+                  child: Text("Cancel"),
+                ),
+                ElevatedButton(
+                  onPressed: isValid
+                      ? () {
+                          Navigator.of(context).pop(amtController.text.trim());
+                        }
+                      : null, // Disable button when invalid
+                  child: Text("Enter"),
+                ),
+              ],
+            );
+          },
+        );
+      },
     );
   }
 
@@ -81,7 +144,7 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Search Products",style: TextStyle(fontWeight: FontWeight.bold),),
+        title: Text("Search Products", style: TextStyle(fontWeight: FontWeight.bold)),
         backgroundColor: Colors.green,
         foregroundColor: Colors.white,
       ),
@@ -108,13 +171,11 @@ class _SearchPageState extends State<SearchPage> {
                     itemCount: _filteredProducts.length,
                     itemBuilder: (context, index) {
                       var product = _filteredProducts[index];
-                      bool isSelected = _selectedProducts.contains(product);
+                      bool isSelected = _selectedProducts.any((p) => p['name'] == product['name']);
                       return Card(
-                        margin:
-                            EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                         child: ListTile(
-                          title: Text(product['name'],
-                              style: TextStyle(fontWeight: FontWeight.bold)),
+                          title: Text(product['name'], style: TextStyle(fontWeight: FontWeight.bold)),
                           subtitle: Text(
                             "Calories: ${product['calories']} kcal\n"
                             "Fat: ${product['fat']} g | Protein: ${product['protein']} g | Carbs: ${product['carbs']} g",
