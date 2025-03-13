@@ -5,11 +5,28 @@ class CalculatePage extends StatelessWidget {
   final List<dynamic> selectedProducts;
 
   const CalculatePage({super.key, required this.selectedProducts});
-  
+
   @override
   Widget build(BuildContext context) {
-    double totalCalories =
-        selectedProducts.fold(0, (sum, item) => sum + (item['calories']/100)*double.parse(item['amount']));
+    double totalCalories = selectedProducts.fold(0, (sum, item) =>
+        sum + (((item['calories'] ?? 0).toDouble()) / 100) * double.parse(item['amount'] ?? "0"));
+
+    double totalProteins = selectedProducts.fold(0, (sum, item) =>
+        sum + (((item['protein'] ?? 0).toDouble()) / 100) * double.parse(item['amount'] ?? "0"));
+
+    double totalCarbs = selectedProducts.fold(0, (sum, item) =>
+        sum + (((item['carbs'] ?? 0).toDouble()) / 100) * double.parse(item['amount'] ?? "0"));
+
+    double totalFat = selectedProducts.fold(0, (sum, item) =>
+        sum + (((item['fat'] ?? 0).toDouble()) / 100) * double.parse(item['amount'] ?? "0"));
+
+    double totalConsumption = totalProteins+totalCarbs+totalFat;
+
+    Map<String, double> pieElements = {
+      'proteins': (totalProteins/totalConsumption)*100,
+      'carbs': (totalCarbs/totalConsumption)*100, 
+      'fat': (totalFat/totalConsumption)*100      
+    };
 
     return Scaffold(
       appBar: AppBar(
@@ -25,29 +42,37 @@ class CalculatePage extends StatelessWidget {
           ),
           SizedBox(height: 20),
           SizedBox(
-            height: 250, // Size of the graph
+            height: 250,
             child: PieChart(
               PieChartData(
                 sectionsSpace: 2,
-                centerSpaceRadius: 50, // Makes it a ring instead of a full pie
-                sections: _generateChartSections(selectedProducts),
+                centerSpaceRadius: 50,
+                sections: _generateChartSections(pieElements), // ✅ Ensure this is correct
               ),
             ),
           ),
           SizedBox(height: 20),
           Text(
-            "Total Calorie Intake: $totalCalories",
-            style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),
+            "Total Calorie Intake: $totalCalories kcal",
+            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+          ),
+          Text(
+            "Total protein Intake: $totalProteins g",
+            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
           ),
           Expanded(
             child: ListView.builder(
               itemCount: selectedProducts.length,
               itemBuilder: (context, index) {
                 var product = selectedProducts[index];
-                double amt = double.parse(product['amount']);
+
                 return ListTile(
                   title: Text(product['name']),
-                  subtitle: Text("Calories: ${(product['calories']/100)*amt} kcal | Proteins: ${(product['protein']/100)*amt} g | Carbs: ${(product['carbs']/100)*amt}"),
+                  subtitle: Text(
+                      "Calories: $totalCalories kcal | "
+                      "Proteins: $totalProteins g | " // ✅ Fixed
+                      "Carbs: $totalCarbs g |"
+                      "Fats: $totalFat"),
                 );
               },
             ),
@@ -56,30 +81,30 @@ class CalculatePage extends StatelessWidget {
       ),
     );
   }
-
-  List<PieChartSectionData> _generateChartSections(List<dynamic> products) {
-    List<Color> colors = [
-      Colors.blue,
-      Colors.red,
-      Colors.green,
-      Colors.orange,
-      Colors.purple,
-      Colors.yellow,
-      const Color.fromARGB(255, 115, 74, 74),
-      Colors.pink
+List<PieChartSectionData> _generateChartSections(Map<String, double> pieElements) {
+  if (pieElements.isEmpty) {
+    return [
+      PieChartSectionData(
+        color: Colors.grey,
+        value: 1, // Avoid division by zero
+        title: "No Data",
+        radius: 60,
+        titleStyle: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),
+      )
     ];
+  }
 
-    return products.asMap().entries.map((entry) {
-      int index = entry.key;
-      var product = entry.value;
-      return PieChartSectionData(
-        color: colors[index % colors.length], // Cycle through colors
-        value: product['calories'].toDouble(),
-        title: "${(product['calories']/100) * double.parse(product['amount'])} kcal",
-        radius: 60, // Ring thickness
-        titleStyle: TextStyle(
-            fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),
-      );
-    }).toList();
+  List<Color> colors = [Colors.blue, Colors.red, Colors.green, Colors.orange];
+  int colorIndex = 0;
+
+  return pieElements.entries.map((entry) {
+    return PieChartSectionData(
+      color: colors[(colorIndex++) % colors.length],
+      value: entry.value,
+      title: entry.key,
+      radius: 60,
+      titleStyle: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),
+    );
+  }).toList();
   }
 }
