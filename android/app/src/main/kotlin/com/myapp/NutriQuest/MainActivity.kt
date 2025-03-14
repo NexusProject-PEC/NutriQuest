@@ -1,4 +1,4 @@
-package com.myapp.NutriQuest
+package com.myapp.nutriquest
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.myapp.NutriQuest">
+    package="com.myapp.nutriquest">
 
     <!-- Required permissions -->
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
