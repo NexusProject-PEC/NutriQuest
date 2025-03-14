@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:math' as math;
 import 'scan_page.dart';
 import 'history_page.dart';
@@ -10,7 +9,6 @@ import 'help_page.dart';
 import 'about_us.dart';
 import 'water.dart';
 import 'search_page.dart';
-import 'user_info_page.dart'; // Import WaterPage
 import 'body_fat_page.dart';
 
 void main() {
@@ -18,28 +16,13 @@ void main() {
 }
 
 class NutrientApp extends StatelessWidget {
-  const NutrientApp({super.key});
+  // const NutrientApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: NutrientHomePage(),
-      routes: {
-        '/login': (context) => LoginPage(),
-      },
-    );
-  }
-}
-
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("Login")),
-      body: Center(child: Text("Login Page")),
     );
   }
 }
@@ -57,8 +40,7 @@ class NutrientHomePage extends StatelessWidget {
   ];
 
   String getRandomTip() {
-    return nutrientTips[
-        (nutrientTips.length * math.Random().nextDouble()).floor()];
+    return nutrientTips[(nutrientTips.length * math.Random().nextDouble()).floor()];
   }
 
   @override
@@ -295,9 +277,4 @@ class NutrientHomePage extends StatelessWidget {
     );
   }
 
-  Future<void> _logout(BuildContext context) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.clear();
-    Navigator.pushReplacementNamed(context, '/login');
-  }
 }

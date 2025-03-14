@@ -31,7 +31,9 @@ class BodyFatProgressPage extends StatelessWidget {
         progressData.map((entry) => (entry['bfp'] as num).toDouble()).toList();
 
     return Scaffold(
-      appBar: AppBar(title: Text("Body Fat Progress")),
+      appBar: AppBar(title: Text("Body Fat Progress",style: TextStyle(fontWeight: FontWeight.bold)),
+      backgroundColor: Colors.green,
+      foregroundColor: Colors.white,),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
