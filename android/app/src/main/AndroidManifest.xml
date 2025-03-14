@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.myapp.NutriQuest">
 
     <!-- Required permissions -->
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
@@ -7,7 +8,7 @@
     <uses-feature android:name="android.hardware.camera" android:required="true"/> <!-- Ensures camera availability -->
 
     <application
-        android:label="nutrino"
+        android:label="NutriQuest"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         

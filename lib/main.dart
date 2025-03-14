@@ -12,6 +12,7 @@ import 'water.dart';
 import 'search_page.dart';
 import 'user_info_page.dart'; // Import WaterPage
 import 'body_fat_page.dart';
+
 void main() {
   runApp(NutrientApp());
 }
@@ -64,7 +65,8 @@ class NutrientHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("NutriQuest",style: TextStyle(fontWeight: FontWeight.bold)),
+        title:
+            Text("NutriQuest", style: TextStyle(fontWeight: FontWeight.bold)),
         centerTitle: true,
         backgroundColor: Colors.green,
         foregroundColor: Colors.white,

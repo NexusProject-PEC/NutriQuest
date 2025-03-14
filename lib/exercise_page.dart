@@ -1,252 +1,198 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'dart:convert';
+import 'package:flutter/services.dart';
 
-class ExercisePage extends StatelessWidget {
-  const ExercisePage({super.key});
-
+class ExercisePage extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Select Your Weight Level",style: TextStyle(fontWeight: FontWeight.bold)),
-        backgroundColor: Colors.green,
-        foregroundColor: Colors.white,
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            "Choose your body type:",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              _buildWeightOption(
-                  context, "Underweight", "assets/underweight.png"),
-              _buildWeightOption(context, "Normal", "assets/normal.png"),
-              _buildWeightOption(
-                  context, "Overweight", "assets/overweight.png"),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildWeightOption(
-      BuildContext context, String label, String imagePath) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) =>
-                  FullExercisePlanPage(weightCategory: label)),
-        );
-      },
-      child: Column(
-        children: [
-          Image.asset(imagePath, width: 80, height: 80),
-          SizedBox(height: 10),
-          Text(label, style: TextStyle(fontSize: 16)),
-        ],
-      ),
-    );
-  }
+  _ExercisePageState createState() => _ExercisePageState();
 }
 
-class FullExercisePlanPage extends StatelessWidget {
-  final String weightCategory;
-  const FullExercisePlanPage({super.key, required this.weightCategory});
+class _ExercisePageState extends State<ExercisePage> {
+  String? selectedGender;
+  String? selectedBodyPart;
+  String? selectedGoal;
+  String? selectedActivityLevel;
+  String name = '';
+  String reps = '';
+  String targetMuscle = '';
+  List<dynamic> exercises = [];
+
+  final Map<String, String> bodyParts = {
+    'Upper Body': 'Upper Body',
+    'Lower Body': 'Lower Body',
+    'Full Body': 'Full Body',
+  };
+
+  final Map<String, String> goals = {
+    'Lose Weight': 'Lose Weight',
+    'Gain Weight': 'Gain Weight',
+    'Maintain Weight': 'Maintain Weight   ',
+  };
+
+  final Map<String, String> activityLevels = {
+    'Less Active': 'Less Active',
+    'Moderate Active': 'Moderate Active',
+    'High Active': 'High Active',
+  };
+
+  Future<void> loadExercises() async {
+    // Load the appropriate JSON file based on gender
+    String jsonFile = selectedGender == 'Male'
+        ? 'male_exercise.json'
+        : 'female_exercise.json';
+    String data = await rootBundle.loadString(jsonFile);
+    List<dynamic> jsonData = json.decode(data);
+
+    // Filter exercises based on user inputs
+    setState(() {
+      exercises = jsonData
+          .where((exercise) =>
+              exercise['target_area'] == selectedBodyPart &&
+              exercise['fitness_goal'] == selectedGoal &&
+              exercise['activity_level'] == selectedActivityLevel)
+          .toList();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    final exercisePlans = {
-      "Underweight": [
-        {
-          "title": "Workout Plan (Strength Focus)",
-          "description": "Focus on weight lifting with progressive overload.",
-          "exercises": [
-            {
-              "name": "Squats",
-              "image": "assets/squats.jpg",
-              "sets": "4",
-              "reps": "8-12"
-            },
-            {
-              "name": "Deadlifts",
-              "image": "assets/deadlift.jpg",
-              "sets": "3",
-              "reps": "6-10"
-            },
-            {
-              "name": "Bench Press",
-              "image": "assets/benchpress.jpg",
-              "sets": "4",
-              "reps": "8-12"
-            },
-            {
-              "name": "Pull-ups",
-              "image": "assets/pullups.jpg",
-              "sets": "3",
-              "reps": "8-10"
-            },
-            {
-              "name": "Shoulder Press",
-              "image": "assets/shoulder press.webp",
-              "sets": "3",
-              "reps": "10-12"
-            },
-          ]
-        }
-      ],
-      "Normal": [
-        {
-          "title": "Balanced Strength & Cardio",
-          "description": "A mix of strength and endurance training.",
-          "exercises": [
-            {
-              "name": "Push-ups",
-              "image": "assets/push up.jpg",
-              "sets": "3",
-              "reps": "12-15"
-            },
-            {
-              "name": "Lunges",
-              "image": "assets/lunges.png",
-              "sets": "3",
-              "reps": "10-12"
-            },
-            {
-              "name": "Plank",
-              "image": "assets/planks.jpg",
-              "sets": "3",
-              "reps": "Hold for 30 sec"
-            },
-            {
-              "name": "Jump Rope",
-              "image": "assets/jumpropes.webp",
-              "sets": "3",
-              "reps": "1 min"
-            },
-            {
-              "name": "Burpees",
-              "image": "assets/burpees.jpg",
-              "sets": "3",
-              "reps": "10"
-            },
-          ]
-        }
-      ],
-      "Overweight": [
-        {
-          "title": "Fat Loss Focus",
-          "description": "High-intensity workouts focusing on weight loss.",
-          "exercises": [
-            {
-              "name": "Jumping Jacks",
-              "image": "assets/jumping jacks.jpg",
-              "sets": "3",
-              "reps": "30 sec"
-            },
-            {
-              "name": "Plank",
-              "image": "assets/planks.jpg",
-              "sets": "3",
-              "reps": "Hold for 40 sec"
-            },
-            {
-              "name": "Mountain Climbers",
-              "image": "assets/mountain climbers.jpg",
-              "sets": "3",
-              "reps": "40 sec"
-            },
-            {
-              "name": "Squats",
-              "image": "assets/squats.jpg",
-              "sets": "3",
-              "reps": "15"
-            },
-            {
-              "name": "High Knees",
-              "image": "assets/high knees.jpg",
-              "sets": "3",
-              "reps": "30 sec"
-            },
-          ]
-        }
-      ]
-    };
-
-    final plan = exercisePlans[weightCategory] ?? [];
-
     return Scaffold(
       appBar: AppBar(
-        title: Text("Exercise Plan for $weightCategory"),
-        backgroundColor: Colors.green,
+        title: Text('Exercise Plan'),
       ),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.all(16),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
         child: Column(
-          children: plan.map((item) {
-            return _buildPlanCard(context, item);
-          }).toList(),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildPlanCard(BuildContext context, Map<String, dynamic> item) {
-    return Card(
-      elevation: 5,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15),
-      ),
-      margin: EdgeInsets.only(bottom: 16),
-      child: Padding(
-        padding: EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
-              item["title"],
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                color: Colors.green[800],
-              ),
-            ),
-            SizedBox(height: 8),
-            Text(item["description"], style: TextStyle(fontSize: 16)),
-            if (item["exercises"] != null) ...[SizedBox(height: 12)],
-            Column(
-              children: item["exercises"].map<Widget>((exercise) {
-                return _buildExerciseTile(exercise);
+            // Gender Selection
+            DropdownButton<String>(
+              value: selectedGender,
+              hint: Text('Select Gender'),
+              onChanged: (String? newValue) {
+                setState(() {
+                  selectedGender = newValue;
+                });
+              },
+              items: <String>['Male', 'Female']
+                  .map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
               }).toList(),
+            ),
+            SizedBox(height: 20),
+
+            // Body Part Selection
+            DropdownButton<String>(
+              value: selectedBodyPart,
+              hint: Text('Select Body Part'),
+              onChanged: (String? newValue) {
+                setState(() {
+                  selectedBodyPart = newValue;
+                });
+              },
+              items:
+                  bodyParts.keys.map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+            ),
+            SizedBox(height: 20),
+
+            // Fitness Goal Selection
+            DropdownButton<String>(
+              value: selectedGoal,
+              hint: Text('Select Fitness Goal'),
+              onChanged: (String? newValue) {
+                setState(() {
+                  selectedGoal = newValue;
+                });
+              },
+              items: goals.keys.map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+            ),
+            SizedBox(height: 20),
+
+            // Activity Level Selection
+            DropdownButton<String>(
+              value: selectedActivityLevel,
+              hint: Text('Select Activity Level'),
+              onChanged: (String? newValue) {
+                setState(() {
+                  selectedActivityLevel = newValue;
+                });
+              },
+              items: activityLevels.keys
+                  .map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+            ),
+            SizedBox(height: 20),
+
+            // Submit Button
+            ElevatedButton(
+              onPressed: () {
+                if (selectedGender != null &&
+                    selectedBodyPart != null &&
+                    selectedGoal != null &&
+                    selectedActivityLevel != null) {
+                  loadExercises();
+                } else {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Please fill all fields')),
+                  );
+                }
+              },
+              child: Text('Get Exercises'),
+            ),
+            SizedBox(height: 20),
+
+            // Display Exercises
+            Expanded(
+              child: exercises.isEmpty
+                  ? Center(
+                      child: Text(
+                          'No exercises found. Please select options and click "Get Exercises".'))
+                  : ListView.builder(
+                      itemCount: exercises
+                          .expand((exercise) => exercise['exercises'])
+                          .length,
+                      itemBuilder: (context, index) {
+                        var allExercise = exercises
+                            .expand((exercise) => exercise['exercises'])
+                            .toList();
+                        var exercise = allExercise[index];
+                        return Card(
+                          child: ListTile(
+                            title: Text(exercise['name']),
+                            subtitle: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Reps: ${exercise['reps']}'),
+                                Text('Target: ${exercise['target_muscle']}'),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    ),
             ),
           ],
         ),
       ),
-    );
-  }
-
-  Widget _buildExerciseTile(Map<String, String> exercise) {
-    return ExpansionTile(
-      title: Row(
-        children: [
-          Image.asset(exercise["image"]!, width: 40, height: 40),
-          SizedBox(width: 10),
-          Text(exercise["name"]!, style: TextStyle(fontSize: 16)),
-        ],
-      ),
-      children: [
-        Padding(
-          padding: EdgeInsets.only(left: 20, bottom: 10),
-          child: Text("${exercise["sets"]} sets × ${exercise["reps"]} reps",
-              style: TextStyle(fontSize: 16, color: Colors.grey)),
-        )
-      ],
     );
   }
 }

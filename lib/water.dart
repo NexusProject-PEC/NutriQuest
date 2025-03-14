@@ -1,32 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:workmanager/workmanager.dart';
+
 import 'dart:math';
 import 'package:NutriQuest/main.dart'; // Adjust the path if needed
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  Workmanager().initialize(
-    callbackDispatcher,
-    isInDebugMode: true,
-  );
-
-  Workmanager().registerPeriodicTask(
-    "resetWaterTask",
-    "resetWaterIntake",
-    frequency: Duration(hours: 24),
-  );
-
   runApp(WaterTrackerApp());
-}
-
-void callbackDispatcher() {
-  Workmanager().executeTask((task, inputData) async {
-    if (task == "resetWaterIntake") {
-      await resetWaterIntake();
-    }
-    return Future.value(true);
-  });
 }
 
 Future<void> resetWaterIntake() async {

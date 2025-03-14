@@ -1,0 +1,1028 @@
+[ {
+    "gender": "Male",
+    "target_area": "Upper Body",
+    "fitness_goal": "Lose Weight",
+    "activity_level": "Less Active",
+    "exercises": [
+        {
+            "name": "Push-Ups",
+            "reps": "3x12",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Dumbbell Rows",
+            "reps": "3x10 (each arm)",
+            "target_muscle": "Back, Biceps"
+        },
+        {
+            "name": "Plank Shoulder Taps",
+            "reps": "3x20 (10 taps per side)",
+            "target_muscle": "Core, Shoulders"
+        },
+        {
+            "name": "Incline Dumbbell Press",
+            "reps": "3x10",
+            "target_muscle": "Upper Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Bicep Curls (Light Dumbbells)",
+            "reps": "3x12",
+            "target_muscle": "Biceps"
+        },
+        {
+            "name": "Tricep Dips (Using a Chair)",
+            "reps": "3x10",
+            "target_muscle": "Triceps"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Upper Body",
+    "fitness_goal": "Lose Weight",
+    "activity_level": "Moderate Active",
+    "exercises": [
+        {
+            "name": "Push-Ups",
+            "reps": "3x15",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Dumbbell Bench Press",
+            "reps": "3x12",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Bent-Over Rows",
+            "reps": "3x15",
+            "target_muscle": "Back, Biceps"
+        },
+        {
+            "name": "Overhead Dumbbell Press",
+            "reps": "3x12",
+            "target_muscle": "Shoulders, Triceps"
+        },
+        {
+            "name": "Bicep Curls",
+            "reps": "3x15",
+            "target_muscle": "Biceps"
+        },
+        {
+            "name": "Tricep Dips",
+            "reps": "3x15",
+            "target_muscle": "Triceps"
+        }
+    ]
+},
+{
+
+    "gender": "Male",
+    "target_area": "Upper Body",
+    "fitness_goal": "Lose Weight",
+    "activity_level": "High Active",
+    "exercises": [
+        {
+            "name": "Push-Ups",
+            "reps": "3x25",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Pull-Ups",
+            "reps": "3x12",
+            "target_muscle": "Back, Biceps"
+        },
+        {
+            "name": "Barbell Bench Press",
+            "reps": "3x15",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Dumbbell Shoulder Press",
+            "reps": "3x15",
+            "target_muscle": "Shoulders, Triceps"
+        },
+        {
+            "name": "Incline Dumbbell Curls",
+            "reps": "3x15",
+            "target_muscle": "Biceps"
+        },
+        {
+            "name": "Tricep Rope Pushdowns",
+            "reps": "3x15",
+            "target_muscle": "Triceps"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Upper Body",
+    "fitness_goal": "Gain Weight",
+    "activity_level": "Less Active",
+    "exercises": [
+        {
+            "name": "Incline Dumbbell Press",
+            "reps": "3x12",
+            "target_muscle": "Upper Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Dumbbell Rows",
+            "reps": "3x10 (each arm)",
+            "target_muscle": "Back, Biceps"
+        },
+        {
+            "name": "Dumbbell Shoulder Press",
+            "reps": "3x10",
+            "target_muscle": "Shoulders, Triceps"
+        },
+        {
+            "name": "Bicep Curls",
+            "reps": "3x12",
+            "target_muscle": "Biceps"
+        },
+        {
+            "name": "Tricep Dips (Using a Chair)",
+            "reps": "3x10",
+            "target_muscle": "Triceps"
+        },
+        {
+            "name": "Plank",
+            "reps": "3x30s",
+            "target_muscle": "Core"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Upper Body",
+    "fitness_goal": "Gain Weight",
+    "activity_level": "Moderate Active",
+    "exercises": [
+        {
+            "name": "Barbell Bench Press",
+            "reps": "3x10",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Pull-Ups",
+            "reps": "3x10",
+            "target_muscle": "Back, Biceps"
+        },
+        {
+            "name": "Overhead Dumbbell Press",
+            "reps": "3x12",
+            "target_muscle": "Shoulders, Triceps"
+        },
+        {
+            "name": "Incline Dumbbell Curls",
+            "reps": "3x12",
+            "target_muscle": "Biceps"
+        },
+        {
+            "name": "Tricep Rope Pushdowns",
+            "reps": "3x12",
+            "target_muscle": "Triceps"
+        },
+        {
+            "name": "Plank with Shoulder Taps",
+            "reps": "3x20 (10 taps per side)",
+            "target_muscle": "Core, Shoulders"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Upper Body",
+    "fitness_goal": "Gain Weight",
+    "activity_level": "High Active",
+    "exercises": [
+        {
+            "name": "Barbell Bench Press",
+            "reps": "3x8",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Weighted Pull-Ups",
+            "reps": "3x6",
+            "target_muscle": "Back, Biceps"
+        },
+        {
+            "name": "Standing Military Press",
+            "reps": "3x8",
+            "target_muscle": "Shoulders, Triceps"
+        },
+        {
+            "name": "Barbell Bicep Curls",
+            "reps": "3x10",
+            "target_muscle": "Biceps"
+        },
+        {
+            "name": "Close-Grip Bench Press",
+            "reps": "3x10",
+            "target_muscle": "Triceps, Chest"
+        },
+        {
+            "name": "Hanging Leg Raises",
+            "reps": "3x15",
+            "target_muscle": "Core"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Upper Body",
+    "fitness_goal": "Maintain Weight",
+    "activity_level": "Less Active",
+    "exercises": [
+        {
+            "name": "Push-Ups",
+            "reps": "3x12",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Dumbbell Shoulder Press",
+            "reps": "3x10",
+            "target_muscle": "Shoulders, Triceps"
+        },
+        {
+            "name": "Seated Row",
+            "reps": "3x12",
+            "target_muscle": "Back, Biceps"
+        },
+        {
+            "name": "Hammer Curls",
+            "reps": "3x10",
+            "target_muscle": "Biceps"
+        },
+        {
+            "name": "Triceps Dips",
+            "reps": "3x10",
+            "target_muscle": "Triceps"
+        },
+        {
+            "name": "Plank",
+            "reps": "3x30s",
+            "target_muscle": "Core, Shoulders"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Upper Body",
+    "fitness_goal": "Maintain Weight",
+    "activity_level": "Moderate Active",
+    "exercises": [
+        {
+            "name": "Incline Dumbbell Press",
+            "reps": "3x10",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Lat Pulldown",
+            "reps": "3x12",
+            "target_muscle": "Back, Biceps"
+        },
+        {
+            "name": "Dumbbell Lateral Raises",
+            "reps": "3x12",
+            "target_muscle": "Shoulders"
+        },
+        {
+            "name": "Barbell Bicep Curls",
+            "reps": "3x10",
+            "target_muscle": "Biceps"
+        },
+        {
+            "name": "Overhead Triceps Extension",
+            "reps": "3x10",
+            "target_muscle": "Triceps"
+        },
+        {
+            "name": "Hanging Knee Raises",
+            "reps": "3x15",
+            "target_muscle": "Core"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Upper Body",
+    "fitness_goal": "Maintain Weight",
+    "activity_level": "High Active",
+    "exercises": [
+        {
+            "name": "Barbell Bench Press",
+            "reps": "3x15",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Pull-Ups",
+            "reps": "3x15",
+            "target_muscle": "Back, Biceps"
+        },
+        {
+            "name": "Standing Overhead Press",
+            "reps": "3x15",
+            "target_muscle": "Shoulders, Triceps"
+        },
+        {
+            "name": "Barbell Rows",
+            "reps": "3x12",
+            "target_muscle": "Back, Biceps"
+        },
+        {
+            "name": "Dips",
+            "reps": "3x12",
+            "target_muscle": "Chest, Triceps"
+        },
+        {
+            "name": "Hanging Leg Raises",
+            "reps": "3x15",
+            "target_muscle": "Core"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Lower Body",
+    "fitness_goal": "Lose Weight",
+    "activity_level": "Less Active",
+    "exercises": [
+        {
+            "name": "Bodyweight Squats",
+            "reps": "3x12",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Step-Ups",
+            "reps": "3x12 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Glute Bridges",
+            "reps": "3x12",
+            "target_muscle": "Glutes, Hamstrings"
+        },
+        {
+            "name": "Calf Raises",
+            "reps": "3x15",
+            "target_muscle": "Calves"
+        },
+        {
+            "name": "Wall Sit",
+            "reps": "3x30s",
+            "target_muscle": "Legs, Core"
+        },
+        {
+            "name": "Lunges",
+            "reps": "3x10 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Lower Body",
+    "fitness_goal": "Lose Weight",
+    "activity_level": "Moderate Active",
+    "exercises": [
+        {
+            "name": "Jump Squats",
+            "reps": "3x12",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Bulgarian Split Squats",
+            "reps": "3x10 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Romanian Deadlifts",
+            "reps": "3x12",
+            "target_muscle": "Hamstrings, Glutes"
+        },
+        {
+            "name": "Calf Raises",
+            "reps": "3x15",
+            "target_muscle": "Calves"
+        },
+        {
+            "name": "Wall Sit with Dumbbells",
+            "reps": "3x30s",
+            "target_muscle": "Legs, Core"
+        },
+        {
+            "name": "Lunges",
+            "reps": "3x12 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Lower Body",
+    "fitness_goal": "Lose Weight",
+    "activity_level": "High Active",
+    "exercises": [
+        {
+            "name": "Jump Squats",
+            "reps": "3x15",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Box Jumps",
+            "reps": "3x15",
+            "target_muscle": "Legs, Core"
+        },
+        {
+            "name": "Deadlifts",
+            "reps": "3x10",
+            "target_muscle": "Hamstrings, Glutes, Lower Back"
+        },
+        {
+            "name": "Bulgarian Split Squats",
+            "reps": "3x12 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Calf Raises",
+            "reps": "3x20",
+            "target_muscle": "Calves"
+        },
+        {
+            "name": "Lunges with Dumbbells",
+            "reps": "3x15 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Lower Body",
+    "fitness_goal": "Gain Weight",
+    "activity_level": "Less Active",
+    "exercises": [
+        {
+            "name": "Goblet Squats",
+            "reps": "3x12",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Seated Leg Press",
+            "reps": "3x10",
+            "target_muscle": "Quads, Glutes"
+        },
+        {
+            "name": "Hamstring Curls",
+            "reps": "3x12",
+            "target_muscle": "Hamstrings"
+        },
+        {
+            "name": "Calf Raises",
+            "reps": "3x15",
+            "target_muscle": "Calves"
+        },
+        {
+            "name": "Step-Ups",
+            "reps": "3x10 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Glute Bridges",
+            "reps": "3x12",
+            "target_muscle": "Glutes, Hamstrings"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Lower Body",
+    "fitness_goal": "Gain Weight",
+    "activity_level": "Moderate Active",
+    "exercises": [
+        {
+            "name": "Barbell Back Squats",
+            "reps": "3x15",
+            "target_muscle": "Quads, Glutes"
+        },
+        {
+            "name": "Romanian Deadlifts",
+            "reps": "3x12",
+            "target_muscle": "Hamstrings, Glutes"
+        },
+        {
+            "name": "Bulgarian Split Squats",
+            "reps": "3x10 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Leg Press",
+            "reps": "3x15",
+            "target_muscle": "Quads, Hamstrings"
+        },
+        {
+            "name": "Seated Calf Raises",
+            "reps": "3x15",
+            "target_muscle": "Calves"
+        },
+        {
+            "name": "Step-Ups with Dumbbells",
+            "reps": "3x12 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Lower Body",
+    "fitness_goal": "Gain Weight",
+    "activity_level": "High Active",
+    "exercises": [
+        {
+            "name": "Barbell Back Squats",
+            "reps": "3x15",
+            "target_muscle": "Quads, Glutes"
+        },
+        {
+            "name": "Deadlifts",
+            "reps": "3x10",
+            "target_muscle": "Hamstrings, Glutes, Lower Back"
+        },
+        {
+            "name": "Bulgarian Split Squats",
+            "reps": "3x15 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Leg Press",
+            "reps": "3x15",
+            "target_muscle": "Quads, Hamstrings"
+        },
+        {
+            "name": "Standing Calf Raises",
+            "reps": "3x20",
+            "target_muscle": "Calves"
+        },
+        {
+            "name": "Jump Squats with Dumbbells",
+            "reps": "3x15",
+            "target_muscle": "Legs, Glutes, Core"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Lower Body",
+    "fitness_goal": "Maintain Weight",
+    "activity_level": "Less Active",
+    "exercises": [
+        {
+            "name": "Bodyweight Squats",
+            "reps": "3x15",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Step-Ups",
+            "reps": "3x12 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Glute Bridges",
+            "reps": "3x12",
+            "target_muscle": "Glutes, Hamstrings"
+        },
+        {
+            "name": "Seated Calf Raises",
+            "reps": "3x15",
+            "target_muscle": "Calves"
+        },
+        {
+            "name": "Wall Sit",
+            "reps": "3x30s",
+            "target_muscle": "Legs, Core"
+        },
+        {
+            "name": "Lunges",
+            "reps": "3x10 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Lower Body",
+    "fitness_goal": "Maintain Weight",
+    "activity_level": "Moderate Active",
+    "exercises": [
+        {
+            "name": "Goblet Squats",
+            "reps": "3x15",
+            "target_muscle": "Quads, Glutes"
+        },
+        {
+            "name": "Romanian Deadlifts",
+            "reps": "3x15",
+            "target_muscle": "Hamstrings, Glutes"
+        },
+        {
+            "name": "Bulgarian Split Squats",
+            "reps": "3x12 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Calf Raises",
+            "reps": "3x20",
+            "target_muscle": "Calves"
+        },
+        {
+            "name": "Step-Ups with Dumbbells",
+            "reps": "3x15 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Wall Sit with Dumbbells",
+            "reps": "3x40s",
+            "target_muscle": "Legs, Core"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Lower Body",
+    "fitness_goal": "Maintain Weight",
+    "activity_level": "High Active",
+    "exercises": [
+        {
+            "name": "Barbell Back Squats",
+            "reps": "3x18",
+            "target_muscle": "Quads, Glutes"
+        },
+        {
+            "name": "Deadlifts",
+            "reps": "3x15",
+            "target_muscle": "Hamstrings, Glutes, Lower Back"
+        },
+        {
+            "name": "Bulgarian Split Squats",
+            "reps": "3x15 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Seated Calf Raises",
+            "reps": "3x20",
+            "target_muscle": "Calves"
+        },
+        {
+            "name": "Jump Squats with Dumbbells",
+            "reps": "3x15",
+            "target_muscle": "Legs, Core"
+        },
+        {
+            "name": "Box Jumps",
+            "reps": "3x15",
+            "target_muscle": "Legs, Glutes, Core"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Full Body",
+    "fitness_goal": "Lose Weight",
+    "activity_level": "Less Active",
+    "exercises": [
+        {
+            "name": "Bodyweight Squats",
+            "reps": "3x15",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Push-Ups",
+            "reps": "3x12",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Seated Leg Lifts",
+            "reps": "3x15",
+            "target_muscle": "Core, Lower Abs"
+        },
+        {
+            "name": "Wall Sit",
+            "reps": "3x30s",
+            "target_muscle": "Legs, Core"
+        },
+        {
+            "name": "Step-Ups",
+            "reps": "3x10 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Plank",
+            "reps": "3x30s",
+            "target_muscle": "Core, Shoulders"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Full Body",
+    "fitness_goal": "Lose Weight",
+    "activity_level": "Moderate Active",
+    "exercises": [
+        {
+            "name": "Jump Squats",
+            "reps": "3x15",
+            "target_muscle": "Legs, Glutes, Core"
+        },
+        {
+            "name": "Push-Ups",
+            "reps": "3x20",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Mountain Climbers",
+            "reps": "3x50s",
+            "target_muscle": "Core, Legs, Shoulders"
+        },
+        {
+            "name": "Lunges",
+            "reps": "3x15 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Dumbbell Shoulder Press",
+            "reps": "3x12",
+            "target_muscle": "Shoulders, Triceps"
+        },
+        {
+            "name": "Plank with Shoulder Taps",
+            "reps": "3x20 (10 taps per side)",
+            "target_muscle": "Core, Shoulders"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Full Body",
+    "fitness_goal": "Lose Weight",
+    "activity_level": "High Active",
+    "exercises": [
+        {
+            "name": "Burpees",
+            "reps": "3x20",
+            "target_muscle": "Full Body, Cardio"
+        },
+        {
+            "name": "Kettlebell Swings",
+            "reps": "3x20",
+            "target_muscle": "Glutes, Core, Shoulders"
+        },
+        {
+            "name": "Jump Lunges",
+            "reps": "3x15 (each leg)",
+            "target_muscle": "Legs, Glutes, Core"
+        },
+        {
+            "name": "Pull-Ups",
+            "reps": "3x12",
+            "target_muscle": "Back, Biceps"
+        },
+        {
+            "name": "Box Jumps",
+            "reps": "3x15",
+            "target_muscle": "Legs, Core"
+        },
+        {
+            "name": "Plank to Push-Ups",
+            "reps": "3x15",
+            "target_muscle": "Core, Shoulders, Triceps"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Full Body",
+    "fitness_goal": "Gain Weight",
+    "activity_level": "Less Active",
+    "exercises": [
+        {
+            "name": "Bodyweight Squats",
+            "reps": "3x12",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Push-Ups",
+            "reps": "3x12",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Glute Bridges",
+            "reps": "3x12",
+            "target_muscle": "Glutes, Hamstrings"
+        },
+        {
+            "name": "Seated Dumbbell Shoulder Press",
+            "reps": "3x10",
+            "target_muscle": "Shoulders, Triceps"
+        },
+        {
+            "name": "Calf Raises",
+            "reps": "3x12",
+            "target_muscle": "Calves"
+        },
+        {
+            "name": "Plank",
+            "reps": "3x30s",
+            "target_muscle": "Core, Shoulders"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Full Body",
+    "fitness_goal": "Gain Weight",
+    "activity_level": "Moderate Active",
+    "exercises": [
+        {
+            "name": "Barbell Squats",
+            "reps": "3x15",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Deadlifts",
+            "reps": "3x10",
+            "target_muscle": "Hamstrings, Glutes, Lower Back"
+        },
+        {
+            "name": "Bench Press",
+            "reps": "3x15",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Pull-Ups",
+            "reps": "3x10",
+            "target_muscle": "Back, Biceps"
+        },
+        {
+            "name": "Dumbbell Shoulder Press",
+            "reps": "3x12",
+            "target_muscle": "Shoulders, Triceps"
+        },
+        {
+            "name": "Hanging Leg Raises",
+            "reps": "3x15",
+            "target_muscle": "Core"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Full Body",
+    "fitness_goal": "Gain Weight",
+    "activity_level": "High Active",
+    "exercises": [
+        {
+            "name": "Barbell Back Squats",
+            "reps": "3x15",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Deadlifts",
+            "reps": "3x12",
+            "target_muscle": "Hamstrings, Glutes, Lower Back"
+        },
+        {
+            "name": "Barbell Bench Press",
+            "reps": "3x15",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Pull-Ups",
+            "reps": "3x15",
+            "target_muscle": "Back, Biceps"
+        },
+        {
+            "name": "Overhead Dumbbell Press",
+            "reps": "3x12",
+            "target_muscle": "Shoulders, Triceps"
+        },
+        {
+            "name": "Hanging Leg Raises",
+            "reps": "3x15",
+            "target_muscle": "Core"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Full Body",
+    "fitness_goal": "Maintain Weight",
+    "activity_level": "Less Active",
+    "exercises": [
+        {
+            "name": "Bodyweight Squats",
+            "reps": "3x15",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Push-Ups",
+            "reps": "3x12",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Seated Leg Lifts",
+            "reps": "3x15",
+            "target_muscle": "Core, Lower Abs"
+        },
+        {
+            "name": "Wall Sit",
+            "reps": "3x30s",
+            "target_muscle": "Legs, Core"
+        },
+        {
+            "name": "Step-Ups",
+            "reps": "3x10 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Plank",
+            "reps": "3x30s",
+            "target_muscle": "Core, Shoulders"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Full Body",
+    "fitness_goal": "Maintain Weight",
+    "activity_level": "Moderate Active",
+    "exercises": [
+        {
+            "name": "Goblet Squats",
+            "reps": "3x15",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Push-Ups",
+            "reps": "3x15",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Bent-Over Rows",
+            "reps": "3x15",
+            "target_muscle": "Back, Biceps"
+        },
+        {
+            "name": "Lunges",
+            "reps": "3x15 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Dumbbell Shoulder Press",
+            "reps": "3x15",
+            "target_muscle": "Shoulders, Triceps"
+        },
+        {
+            "name": "Plank to Push-Up",
+            "reps": "3x12",
+            "target_muscle": "Core, Shoulders"
+        }
+    ]
+},
+{
+    "gender": "Male",
+    "target_area": "Full Body",
+    "fitness_goal": "Maintain Weight",
+    "activity_level": "High Active",
+    "exercises": [
+        {
+            "name": "Barbell Back Squats",
+            "reps": "3x15",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Deadlifts",
+            "reps": "3x12",
+            "target_muscle": "Hamstrings, Glutes, Lower Back"
+        },
+        {
+            "name": "Pull-Ups",
+            "reps": "3x15",
+            "target_muscle": "Back, Biceps"
+        },
+        {
+            "name": "Dumbbell Bench Press",
+            "reps": "3x15",
+            "target_muscle": "Chest, Shoulders, Triceps"
+        },
+        {
+            "name": "Bulgarian Split Squats",
+            "reps": "3x15 (each leg)",
+            "target_muscle": "Legs, Glutes"
+        },
+        {
+            "name": "Hanging Leg Raises",
+            "reps": "3x15",
+            "target_muscle": "Core"
+        }
+    ]
+}
+]

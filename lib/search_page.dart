@@ -23,7 +23,7 @@ class _SearchPageState extends State<SearchPage> {
   }
 
   Future<void> _loadProducts() async {
-    String data = await rootBundle.loadString('assets/products_1.json');
+    String data = await rootBundle.loadString('assets/products.json');
     setState(() {
       _products = json.decode(data);
       _filteredProducts = _products;
@@ -81,7 +81,10 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Search Products",style: TextStyle(fontWeight: FontWeight.bold),),
+        title: Text(
+          "Search Products",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
         backgroundColor: Colors.green,
         foregroundColor: Colors.white,
       ),
@@ -144,10 +147,18 @@ class _SearchPageState extends State<SearchPage> {
                     children: [
                       TextButton(
                         onPressed: _clearSelection,
+                        style: TextButton.styleFrom(
+                          backgroundColor: Colors.red,
+                          foregroundColor: Colors.white,
+                        ),
                         child: Text("Clear Selection"),
                       ),
                       ElevatedButton(
                         onPressed: _navigateToCalculatePage,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green,
+                          foregroundColor: Colors.white, // Set color to green
+                        ),
                         child: Text("Calculate"),
                       ),
                     ],
