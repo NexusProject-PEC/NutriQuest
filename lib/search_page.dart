@@ -87,8 +87,7 @@ class _SearchPageState extends State<SearchPage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) =>
-            CalculatePage(selectedProducts: _selectedProducts),
+        builder: (context) => CalculatePage(selectedProducts: _selectedProducts),
       ),
     );
   }
@@ -106,6 +105,7 @@ class _SearchPageState extends State<SearchPage> {
             return AlertDialog(
               title: Text("Amount of Consumption"),
               content: TextField(
+                //DropDown box to be added HERE
                 controller: amtController,
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
@@ -114,8 +114,7 @@ class _SearchPageState extends State<SearchPage> {
                 ),
                 onChanged: (value) {
                   setDialogState(() {
-                    isValid =
-                        _isNumeric(value.trim()) && value.trim().isNotEmpty;
+                    isValid = _isNumeric(value.trim()) && value.trim().isNotEmpty;
                   });
                 },
               ),
@@ -146,8 +145,7 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Search Products",
-            style: TextStyle(fontWeight: FontWeight.bold)),
+        title: Text("Search Products", style: TextStyle(fontWeight: FontWeight.bold)),
         backgroundColor: Colors.green,
         foregroundColor: Colors.white,
       ),
@@ -174,14 +172,11 @@ class _SearchPageState extends State<SearchPage> {
                     itemCount: _filteredProducts.length,
                     itemBuilder: (context, index) {
                       var product = _filteredProducts[index];
-                      bool isSelected = _selectedProducts
-                          .any((p) => p['name'] == product['name']);
+                      bool isSelected = _selectedProducts.any((p) => p['name'] == product['name']);
                       return Card(
-                        margin:
-                            EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                         child: ListTile(
-                          title: Text(product['name'],
-                              style: TextStyle(fontWeight: FontWeight.bold)),
+                          title: Text(product['name'], style: TextStyle(fontWeight: FontWeight.bold)),
                           subtitle: Text(
                             "Calories: ${product['calories']} kcal\n"
                             "Fat: ${product['fat']} g | Protein: ${product['protein']} g | Carbs: ${product['carbs']} g",
@@ -211,11 +206,18 @@ class _SearchPageState extends State<SearchPage> {
                     children: [
                       TextButton(
                         onPressed: _clearSelection,
-                        child: Text("Clear Selection"),
+                        style: TextButton.styleFrom(backgroundColor: Colors.red,),
+                        child: Text("Clear Selection", style: TextStyle(color: Colors.white),),
+                      ),
+                      SizedBox(
+                        width: 10,
                       ),
                       ElevatedButton(
                         onPressed: _navigateToCalculatePage,
-                        child: Text("Calculate"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green,
+                        ),
+                        child: Text("Calculate", style: TextStyle(color: Colors.white)),
                       ),
                     ],
                   )
